@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'dart:async';
+import 'package:flutter/services.dart' show rootBundle;
+import 'dart:convert';
+import 'CountryInformation.dart';
 
 class MainView extends StatefulWidget {
   @override
@@ -10,17 +14,34 @@ class _MainViewState extends State<MainView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CardTiles(),
+      body: FutureBuilder(
+        future: loadJson(),
+        builder: (BuildContext context, AsyncSnapshot snapshot){
+          if(snapshot.hasData){
+            var data = json.decode(snapshot.data);
+            var rest = data as List;
+            List<CountryInformation> list = rest.map<CountryInformation>((json) => CountryInformation.fromJson(json)).toList();
+            return CardTiles(list);
+          }else{
+            return CircularPercentIndicator();
+          }
+        },
+      ),
     );
   }
 }
 
 class CardTiles extends StatelessWidget {
+  final List<CountryInformation> _countries;
+
+  CardTiles(this._countries);
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      itemCount: _countries.length,
       itemBuilder: (BuildContext context, int index) {
-        return CardTile();
+        return CardTile(_countries.elementAt(index).countryName,_countries.elementAt(index).corruptionIndex,_countries.elementAt(index).aidMoney);
       },
     );
   }
@@ -39,9 +60,12 @@ class CardTile extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Text(_country),
-          CircularProgressIndicator(),
         ],
       ),
     );
   }
+}
+
+Future<String> loadJson() async {
+  return await rootBundle.loadString("data/dummy.json");
 }
