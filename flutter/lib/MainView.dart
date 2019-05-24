@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 import 'CountryInformation.dart';
+import 'DetailedView.dart';
 
 class MainView extends StatefulWidget {
   @override
@@ -41,26 +42,57 @@ class CardTiles extends StatelessWidget {
     return ListView.builder(
       itemCount: _countries.length,
       itemBuilder: (BuildContext context, int index) {
-        return CardTile(_countries.elementAt(index).countryName,_countries.elementAt(index).corruptionIndex,_countries.elementAt(index).aidMoney);
+        return CardTile(_countries.elementAt(index));
       },
     );
   }
 }
 
 class CardTile extends StatelessWidget {
-  final String _country;
-  final String _corruption;
-  final String _money;
+  final CountryInformation _countryInformation;
 
-  CardTile(this._country,this._corruption,this._money);
+  CardTile(this._countryInformation);
+
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Column(
-        children: <Widget>[
-          Text(_country),
-        ],
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => DetailedView(_countryInformation)),
+        );
+      },
+      child: Card(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Text(_countryInformation.countryName.toUpperCase()),
+              CircularPercentIndicator(
+                  radius: 50,
+                  lineWidth: 5,
+                  progressColor: Colors.green,
+                  percent: 0.2,
+                  center: Text(_countryInformation.aidMoney),
+                  footer: Text("Amount of aidmoney"),
+                ),
+                CircularPercentIndicator(
+                  radius: 50,
+                  lineWidth: 5,
+                  progressColor: Colors.red,
+                  percent: 0.2,
+                  center: Text(_countryInformation.corruptionIndex),
+                  footer: Text("Corruption index"),
+                ), 
+                Icon(
+                  IconData(0xe5e1, fontFamily: 'MaterialIcons', matchTextDirection: true)
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
