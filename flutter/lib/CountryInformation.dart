@@ -13,6 +13,10 @@ class CountryInformation {
     return CountryInformation(json['country'],json['CPI'],json['aid_received_sek'], json["country_code"]);
   }
 
+  double calculateMSEKCPI() {
+    return (_aidMoney/_corruptionIndex/1000000);
+  }
+
   get countryName => _countryName;
   get corruptionIndex => _corruptionIndex;
   get aidMoney => _aidMoney;

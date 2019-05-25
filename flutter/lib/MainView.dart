@@ -13,7 +13,27 @@ class MainView extends StatefulWidget {
   _MainViewState createState() => _MainViewState();
 }
 
-enum FILTERVALUES { CORRUPTION, AID }
+enum FILTERVALUES { CORRUPTION, AID, MSEKCPI }
+
+String filtervaluesToString(FILTERVALUES value){
+  switch(value) {
+    case FILTERVALUES.AID: {
+      return "Aid";
+    }
+    break;
+
+    case FILTERVALUES.CORRUPTION: {
+      return "Corruption Index";
+    }
+    break;
+
+    case FILTERVALUES.MSEKCPI: {
+      return "MSEK/CPI";
+    }
+    break;
+  }
+}
+
 
 class _MainViewState extends State<MainView> {
   FILTERVALUES dropdownValue = FILTERVALUES.CORRUPTION;
@@ -32,6 +52,7 @@ class _MainViewState extends State<MainView> {
   @override
   void dispose() {
     _scrollController.dispose();
+    _textEditingController.dispose();
     super.dispose();
   }
 
@@ -41,6 +62,8 @@ class _MainViewState extends State<MainView> {
       list.sort((a, b) => a.corruptionIndex.compareTo(b.corruptionIndex));
     } else if (property == FILTERVALUES.AID) {
       list.sort((a, b) => a.aidMoney.compareTo(b.aidMoney));
+    } else if (property == FILTERVALUES.MSEKCPI) {
+      list.sort((a,b) => a.calculateMSEKCPI().compareTo(b.calculateMSEKCPI()));
     }
 
     if (userSearch != "") {
@@ -81,7 +104,7 @@ class _MainViewState extends State<MainView> {
                       _scrollController.position.minScrollExtent,
                       duration: Duration(milliseconds: 300),
                       curve: Curves.ease);
-                }, "Sök land", _textEditingController),
+                }, "Search for a country", _textEditingController),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -98,22 +121,32 @@ class _MainViewState extends State<MainView> {
                         setState(() {
                           dropdownValue = newValue;
                         });
+                        _scrollController.animateTo(
+                        _scrollController.position.minScrollExtent,
+                        duration: Duration(milliseconds: 300),
+                        curve: Curves.ease);
                       },
                       items: <FILTERVALUES>[
                         FILTERVALUES.CORRUPTION,
-                        FILTERVALUES.AID
+                        FILTERVALUES.AID,
+                        FILTERVALUES.MSEKCPI
                       ].map<DropdownMenuItem<FILTERVALUES>>(
                           (FILTERVALUES value) {
                         return DropdownMenuItem<FILTERVALUES>(
                           value: value,
-                          child: Text(value.toString().split('.').last),
+                          child: Text(filtervaluesToString(value)),
                         );
                       }).toList(),
                     ),
                     IconButton(
                       onPressed: () => setState(() {
                             descending = !descending;
+                            _scrollController.animateTo(
+                            _scrollController.position.minScrollExtent,
+                            duration: Duration(milliseconds: 300),
+                            curve: Curves.ease);
                           }),
+                          
                       icon: Icon(
                         descending
                             ? MaterialCommunityIcons.getIconData(
@@ -161,6 +194,7 @@ class _MainViewState extends State<MainView> {
     );
   }
 }
+
 
 class CardTiles extends StatelessWidget {
   final List<CountryInformation> _countries;
@@ -246,7 +280,7 @@ class CardTile extends StatelessWidget {
                           lineWidth: 6,
                           progressColor: Colors.green,
                           percent:
-                              _countryInformation.aidMoney / _totalAidMoney,
+                              _countryInformation.aidMoney < 0 ? 0: _countryInformation.aidMoney / _totalAidMoney,
                           circularStrokeCap: CircularStrokeCap.round,
                           center: Text(
                             _countryInformation.aidMoney / 1000000 < 100
@@ -260,7 +294,7 @@ class CardTile extends StatelessWidget {
                             style: TextStyle(fontSize: 15),
                           ),
                           footer: Text(
-                            "Stödpengar",
+                            "Aid",
                             style: TextStyle(
                                 fontWeight: FontWeight.w300, fontSize: 15),
                           ),
@@ -284,7 +318,7 @@ class CardTile extends StatelessWidget {
                             style: TextStyle(fontSize: 15),
                           ),
                           footer: Text(
-                            "Korruptionsindex",
+                            "Corruption Index",
                             style: TextStyle(
                                 fontWeight: FontWeight.w300, fontSize: 15),
                           ),
@@ -307,10 +341,7 @@ class CardTile extends StatelessWidget {
                         Column(
                           children: <Widget>[
                             Text(
-                              (_countryInformation.aidMoney /
-                                      _countryInformation.corruptionIndex /
-                                      1000000)
-                                  .toStringAsFixed(3),
+                              _countryInformation.calculateMSEKCPI().toStringAsFixed(3),
                               textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 20),
                             ),
