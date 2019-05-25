@@ -17,12 +17,14 @@ corruptionPerCountry.columns = ["country","CPI"]
 #print(corruptionPerCountry)
 print(aidPerCountry)
 
-result = aidPerCountry.join(corruptionPerCountry, on="country", how='outer')
+result = corruptionPerCountry.merge(aidPerCountry, on="country", how='outer')
 
 #result = aidPerCountry.join(corruptionPerCountry, on="Country")
 #result = result.to_json(orient='table')
-Export = result.to_json (r'.\output.json', orient="table")
-#print(result)
+Export = result.to_json (r'.\WithNullValues.json', orient="table")
+resultNoNull = result.dropna()
+Export = resultNoNull.to_json(r'.\WithoutNullValues.json', orient="table")
+print(resultNoNull)
 
 #with open('result.json','w') as outfile:
     #json.dump(result, outfile)
