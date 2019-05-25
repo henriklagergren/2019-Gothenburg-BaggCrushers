@@ -13,7 +13,7 @@ class MainView extends StatefulWidget {
   _MainViewState createState() => _MainViewState();
 }
 
-enum FILTERVALUES { CORRUPTION, AID, MSEKCPI }
+enum FILTERVALUES { CORRUPTION, AID, MSEKCPI, COUNTRY }
 
 String filtervaluesToString(FILTERVALUES value) {
   switch (value) {
@@ -32,6 +32,11 @@ String filtervaluesToString(FILTERVALUES value) {
     case FILTERVALUES.MSEKCPI:
       {
         return "MSEK/CPI";
+      }
+      break;
+    case FILTERVALUES.COUNTRY:
+      {
+        return "Country";
       }
       break;
   }
@@ -66,6 +71,8 @@ class _MainViewState extends State<MainView> {
       list.sort((a, b) => a.aidMoney.compareTo(b.aidMoney));
     } else if (property == FILTERVALUES.MSEKCPI) {
       list.sort((a, b) => a.calculateMSEKCPI().compareTo(b.calculateMSEKCPI()));
+    } else if (property == FILTERVALUES.COUNTRY) {
+      list.sort((a,b) => a.countryName.compareTo(b.countryName));
     }
 
     if (userSearch != "") {
@@ -129,9 +136,10 @@ class _MainViewState extends State<MainView> {
                             curve: Curves.ease);
                       },
                       items: <FILTERVALUES>[
+                        FILTERVALUES.MSEKCPI,
                         FILTERVALUES.CORRUPTION,
                         FILTERVALUES.AID,
-                        FILTERVALUES.MSEKCPI
+                        FILTERVALUES.COUNTRY
                       ].map<DropdownMenuItem<FILTERVALUES>>(
                           (FILTERVALUES value) {
                         return DropdownMenuItem<FILTERVALUES>(
@@ -251,7 +259,8 @@ class CardTile extends StatelessWidget {
       onTap: () => Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => DetailedView(_countryInformation, _totalAidMoney))),
+              builder: (context) =>
+                  DetailedView(_countryInformation, _totalAidMoney))),
       child: Card(
         elevation: 4,
         shape: RoundedRectangleBorder(
