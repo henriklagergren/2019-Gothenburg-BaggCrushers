@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'dart:async';
@@ -11,23 +12,71 @@ class MainView extends StatefulWidget {
   _MainViewState createState() => _MainViewState();
 }
 
+
+enum FILTERVALUES{
+  CORRUPTION,
+  AID
+}
+
 class _MainViewState extends State<MainView> {
+
+ 
+
+
+  FILTERVALUES dropdownValue = FILTERVALUES.CORRUPTION;  
+
+  List<CountryInformation> sortBy(FILTERVALUES property, List<CountryInformation> list){
+    if(property == FILTERVALUES.CORRUPTION){
+      list.sort((a, b) => a.corruptionIndex.compareTo(b.corruptionIndex));
+    }else if(property == FILTERVALUES.AID){
+      list.sort((a, b) => a.aidMoney.compareTo(b.aidMoney));
+    }
+    return list;
+  }
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FutureBuilder(
-        future: loadJson(),
-        builder: (BuildContext context, AsyncSnapshot snapshot){
-          if(snapshot.hasData){
-            var data = json.decode(snapshot.data);
-            var rest = data as List;
-            List<CountryInformation> list = rest.map<CountryInformation>((json) => CountryInformation.fromJson(json)).toList();
-            return CardTiles(list);
-          }else{
-            return CircularPercentIndicator();
-          }
-        },
+      appBar: PreferredSize(
+        preferredSize: Size(60,60),
+        child: Column(
+          children: <Widget>[
+            SizedBox(height: 30),
+            DropdownButton<FILTERVALUES>(
+                value: dropdownValue,
+                onChanged: (FILTERVALUES newValue) {
+                  setState(() {
+                    dropdownValue = newValue;
+                  });
+                },
+                items: <FILTERVALUES>[FILTERVALUES.CORRUPTION, FILTERVALUES.AID]
+                    .map<DropdownMenuItem<FILTERVALUES>>((FILTERVALUES value) {
+                  return DropdownMenuItem<FILTERVALUES>(
+                    value: value,
+                    child: Text(value.toString().split('.').last),
+                  );
+                }).toList(),
+              ),
+        ],),
       ),
+      body: FutureBuilder(
+            future: loadJson(),
+            builder: (BuildContext context, AsyncSnapshot snapshot){
+              if(snapshot.hasData){
+                var data = json.decode(snapshot.data);
+                var rest = data as List;
+                List<CountryInformation> list = rest.map<CountryInformation>((json) => CountryInformation.fromJson(json)).toList();
+                list = sortBy(dropdownValue, list);
+                
+                return CardTiles(list);
+              }else{
+                return CircularPercentIndicator(radius: 10,);
+              }
+            },
+          ),
+        
+    
     );
   }
 }

@@ -1,4 +1,4 @@
-#Fri May 24 22:54:19 CEST 2019
+#Sat May 25 15:36:45 CEST 2019
 base.0=/home/viktor/dev/2019-gothenburg-baggCrushers/flutter/build/app/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
