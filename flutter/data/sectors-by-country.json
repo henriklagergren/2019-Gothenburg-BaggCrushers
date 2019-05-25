@@ -1,0 +1,3373 @@
+{
+    "countries": [
+        {
+            "Afghanistan": {
+                "sectors": [
+                    {
+                        "Agricultural development": -1661612.39999604
+                    },
+                    {
+                        "Anti-corruption organisations and institutions": 4499999.999996702
+                    },
+                    {
+                        "Basic drinking water supply and basic sanitation": 1311457.6699939517
+                    },
+                    {
+                        "Child soldiers (Prevention and demobilisation)": 2249999.999998351
+                    },
+                    {
+                        "Decentralisation and support to subnational government": 107064219.69998986
+                    },
+                    {
+                        "Democratic participation and civil society": 7323449.819973682
+                    },
+                    {
+                        "Disaster prevention and preparedness": 47999999.99999669
+                    },
+                    {
+                        "Education policy and administrative management": 62695820.99998451
+                    },
+                    {
+                        "Elections": 44999999.999984406
+                    },
+                    {
+                        "Emergency food aid": 1961999.999998423
+                    },
+                    {
+                        "Employment policy and administrative management": 75999999.9999926
+                    },
+                    {
+                        "Energy generation, renewable sources \u2013 multiple technologies": 75999999.9999926
+                    },
+                    {
+                        "Facilitation of orderly, safe, regular and responsible migration and mobility": 29999999.9999925
+                    },
+                    {
+                        "Human rights": 16786959.999994136
+                    },
+                    {
+                        "Material relief assistance and services": 119793699.99998137
+                    },
+                    {
+                        "Media and free flow of information": 9499999.99998821
+                    },
+                    {
+                        "Multisector aid for basic social services": 201999999.9999959
+                    },
+                    {
+                        "Primary education": 197073324.99997285
+                    },
+                    {
+                        "Public sector policy and administrative management": 75999999.9999926
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 40912199.99998923
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 6755999.999996139
+                    },
+                    {
+                        "Removal of land mines and explosive remnants of war": 14999999.9999919
+                    },
+                    {
+                        "Research/scientific institutions": 5399999.999994306
+                    },
+                    {
+                        "Road transport": 63999999.99999559
+                    },
+                    {
+                        "Sectors not specified": 1231646.999998522
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 18943144.759991262
+                    },
+                    {
+                        "Vocational training": 13999999.9999936
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 14405483.179988906
+                    }
+                ]
+            }
+        },
+        {
+            "Albania": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 24696637.43996913
+                    },
+                    {
+                        "Domestic Revenue Mobilisation": 5640813.999997625
+                    },
+                    {
+                        "Ending violence against women and girls ": 17999999.9999955
+                    },
+                    {
+                        "Environmental policy and administrative management": 28785153.959959455
+                    },
+                    {
+                        "Forestry development": 4079999.99999898
+                    },
+                    {
+                        "Human rights": 325899.999999828
+                    },
+                    {
+                        "Rural development": 247798.999991808
+                    },
+                    {
+                        "Security system management and reform": 7149751.409993479
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 848519.9999879473
+                    },
+                    {
+                        "Statistical capacity building": 4492779.379991323
+                    },
+                    {
+                        "Tourism policy and administrative management": -1277888.0999987815
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 820178.9999930953
+                    }
+                ]
+            }
+        },
+        {
+            "Algeria": {
+                "sectors": [
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 4999999.999991508
+                    },
+                    {
+                        "Emergency food aid": 5021999.999995486
+                    },
+                    {
+                        "Material relief assistance and services": 2524499.999995838
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 2524499.999995838
+                    }
+                ]
+            }
+        },
+        {
+            "Angola": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 2255525.999998899
+                    },
+                    {
+                        "Rural development": 6092080.219993854
+                    }
+                ]
+            }
+        },
+        {
+            "Armenia": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 250613.9999998776
+                    },
+                    {
+                        "Sectors not specified": 2327866.3599971975
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 1769999.999998471
+                    }
+                ]
+            }
+        },
+        {
+            "Azerbaijan": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 501227.9999997552
+                    },
+                    {
+                        "Emergency food aid": 980999.9999948664
+                    },
+                    {
+                        "Material relief assistance and services": 1471499.999996645
+                    },
+                    {
+                        "Public sector policy and administrative management": 91399.999992192
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 490499.999993088
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 1961999.999998423
+                    }
+                ]
+            }
+        },
+        {
+            "Bangladesh": {
+                "sectors": [
+                    {
+                        "Agricultural alternative development": 443427.9999945192
+                    },
+                    {
+                        "Basic drinking water supply": 45499999.9999879
+                    },
+                    {
+                        "Basic drinking water supply and basic sanitation": 11999999.999997
+                    },
+                    {
+                        "Basic health care": -200582.2499968152
+                    },
+                    {
+                        "Basic health infrastructure": 17499999.99999201
+                    },
+                    {
+                        "Democratic participation and civil society": 32601282.0099739
+                    },
+                    {
+                        "Disaster prevention and preparedness": 18033999.99998426
+                    },
+                    {
+                        "Emergency food aid": 8631899.999980733
+                    },
+                    {
+                        "Employment policy and administrative management": 8749727.360000517
+                    },
+                    {
+                        "Environmental policy and administrative management": -6852215.62999862
+                    },
+                    {
+                        "Facilitation of orderly, safe, regular and responsible migration and mobility": 24999999.9999923
+                    },
+                    {
+                        "Health policy and administrative management": 52309132.999986984
+                    },
+                    {
+                        "Human rights": 15818803.999986924
+                    },
+                    {
+                        "Material relief assistance and services": 70118048.42997214
+                    },
+                    {
+                        "Media and free flow of information": 15864790.99999981
+                    },
+                    {
+                        "Medical research": 9999999.999991708
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 1525999.999997808
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 34338579.9999847
+                    },
+                    {
+                        "Reproductive health care": 977772.3099935041
+                    },
+                    {
+                        "Rural development": 414657.3699921528
+                    },
+                    {
+                        "STD control including HIV/AIDS": 3795999.999999775
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 13999999.9999936
+                    },
+                    {
+                        "Statistical capacity building": 6499999.999993307
+                    },
+                    {
+                        "Vocational training": -7771.9099988952
+                    },
+                    {
+                        "Waste management / disposal": 29999999.9999925
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 4733906.5699918205
+                    }
+                ]
+            }
+        },
+        {
+            "Benin": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 3058559.9999870686
+                    },
+                    {
+                        "Reproductive health care": 2701439.9999941103
+                    }
+                ]
+            }
+        },
+        {
+            "Bolivia, Plurinational State Of": {
+                "sectors": [
+                    {
+                        "Basic drinking water supply and basic sanitation": 1151170.9999922458
+                    },
+                    {
+                        "Basic sanitation": 23999999.999994
+                    },
+                    {
+                        "Bio-diversity": 7999999.999995103
+                    },
+                    {
+                        "Business support services and institutions": 7699999.999993006
+                    },
+                    {
+                        "Decentralisation and support to subnational government": 10999999.999990009
+                    },
+                    {
+                        "Democratic participation and civil society": 17168582.01995334
+                    },
+                    {
+                        "Energy research": 1749999.9999861647
+                    },
+                    {
+                        "Environmental policy and administrative management": -300060.9999967032
+                    },
+                    {
+                        "Environmental research": 874999.9999930824
+                    },
+                    {
+                        "Human rights": 41743073.249986306
+                    },
+                    {
+                        "Local government administration": 5399999.999994306
+                    },
+                    {
+                        "Low-cost housing": 832499.9999940888
+                    },
+                    {
+                        "Medical research": 3549999.9999813694
+                    },
+                    {
+                        "Multisector education/training": 244326.7299973464
+                    },
+                    {
+                        "Public sector policy and administrative management": 2999999.999994905
+                    },
+                    {
+                        "Reproductive health care": 32871999.999990333
+                    },
+                    {
+                        "Research/scientific institutions": 34674443.99996957
+                    },
+                    {
+                        "Rural development": 8714999.99998533
+                    },
+                    {
+                        "Sectors not specified": 6879750.829973439
+                    },
+                    {
+                        "Technological research and development": 6628999.999973177
+                    },
+                    {
+                        "Urban development and management": 28499999.999990698
+                    },
+                    {
+                        "Water supply and sanitation - large systems": 4999999.999991508
+                    }
+                ]
+            }
+        },
+        {
+            "Bosnia And Herzegovina": {
+                "sectors": [
+                    {
+                        "Agricultural policy and administrative management": 9499999.9999969
+                    },
+                    {
+                        "Business support services and institutions": 5314999.000000681
+                    },
+                    {
+                        "Decentralisation and support to subnational government": 12749999.999984862
+                    },
+                    {
+                        "Democratic participation and civil society": 8170638.039982015
+                    },
+                    {
+                        "Domestic Revenue Mobilisation": 7153006.999993928
+                    },
+                    {
+                        "Employment policy and administrative management": 10999999.999990007
+                    },
+                    {
+                        "Ending violence against women and girls ": 6359999.999994064
+                    },
+                    {
+                        "Energy conservation and demand-side efficiency": 12999999.9999953
+                    },
+                    {
+                        "Environmental education/ training": 151431.0499940328
+                    },
+                    {
+                        "Environmental policy and administrative management": 4302477.47998867
+                    },
+                    {
+                        "Human rights": 1504958.9999990612
+                    },
+                    {
+                        "Legal and judicial development": 23952361.99998779
+                    },
+                    {
+                        "Media and free flow of information": 5959999.999991268
+                    },
+                    {
+                        "Multisector aid": 3134.1999991032
+                    },
+                    {
+                        "Multisector education/training": 481961.9599989841
+                    },
+                    {
+                        "Public sector policy and administrative management": 1195815.9999934512
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 30999999.99998211
+                    },
+                    {
+                        "Statistical capacity building": -118264.9999950504
+                    },
+                    {
+                        "Urban development and management": 8643399.999991503
+                    },
+                    {
+                        "Water supply and sanitation - large systems": -1589238.999992052
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 10889999.99997881
+                    }
+                ]
+            }
+        },
+        {
+            "Brazil": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 2517543.149985792
+                    },
+                    {
+                        "Environmental policy and administrative management": 5282199.999995602
+                    }
+                ]
+            }
+        },
+        {
+            "Burkina Faso": {
+                "sectors": [
+                    {
+                        "Administrative costs (non-sector allocable)": 887316.8199811993
+                    },
+                    {
+                        "Agricultural development": 84999999.999986
+                    },
+                    {
+                        "Agricultural land resources": 499999.9999948056
+                    },
+                    {
+                        "Agricultural water resources": 664140.2999972757
+                    },
+                    {
+                        "Anti-corruption organisations and institutions": 6553709.08998413
+                    },
+                    {
+                        "Basic sanitation": 20000000.000000793
+                    },
+                    {
+                        "Democratic participation and civil society": 20120177.529973064
+                    },
+                    {
+                        "Energy generation, renewable sources \u2013 multiple technologies": 8922499.999988083
+                    },
+                    {
+                        "Environmental policy and administrative management": 122797.9999996416
+                    },
+                    {
+                        "Forestry development": 1999999.999996603
+                    },
+                    {
+                        "Forestry policy and administrative management": 5999999.9999985
+                    },
+                    {
+                        "Human rights": 6484672.459996488
+                    },
+                    {
+                        "Legislatures and political parties": 11999999.999997
+                    },
+                    {
+                        "Material relief assistance and services": 14659999.999991266
+                    },
+                    {
+                        "Multisector aid for basic social services": 16189999.99999849
+                    },
+                    {
+                        "Multisector education/training": 586384.1499913632
+                    },
+                    {
+                        "Reproductive health care": 3268800.749985048
+                    },
+                    {
+                        "Research/scientific institutions": 607799.9999917009
+                    },
+                    {
+                        "Rural development": 820937.8199975112
+                    },
+                    {
+                        "Social protection and welfare services policy, planning and administration": 2545884.7399892807
+                    },
+                    {
+                        "Water sector policy and administrative management": 13699999.99999151
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 9999999.999983016
+                    }
+                ]
+            }
+        },
+        {
+            "Burundi": {
+                "sectors": [
+                    {
+                        "Emergency food aid": 10589999.999994094
+                    },
+                    {
+                        "Material relief assistance and services": 30652347.889979653
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 326999.9999982888
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 13834999.999989841
+                    }
+                ]
+            }
+        },
+        {
+            "Cambodia": {
+                "sectors": [
+                    {
+                        "Decentralisation and support to subnational government": 5211940.139989762
+                    },
+                    {
+                        "Democratic participation and civil society": 15469769.58995479
+                    },
+                    {
+                        "Domestic Revenue Mobilisation": 1787878.999999462
+                    },
+                    {
+                        "Education policy and administrative management": 60359049.16998549
+                    },
+                    {
+                        "Employment policy and administrative management": 15019542.999990346
+                    },
+                    {
+                        "Environmental policy and administrative management": 28626311.81997779
+                    },
+                    {
+                        "Human rights": 46875064.77995547
+                    },
+                    {
+                        "Multisector education/training": 1249400.0399948999
+                    },
+                    {
+                        "Public Finance Management (PFM)": 6899260.959985176
+                    },
+                    {
+                        "Public sector policy and administrative management": 7183611.459989216
+                    },
+                    {
+                        "Reproductive health care": 1337855.9999923657
+                    },
+                    {
+                        "STD control including HIV/AIDS": 2703999.999993531
+                    },
+                    {
+                        "Sectors not specified": 1663005.5999772912
+                    },
+                    {
+                        "Social dialogue": -38006.8899993216
+                    },
+                    {
+                        "Teacher training": 577999.9999915273
+                    },
+                    {
+                        "Vocational training": 7399999.999990909
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 3299999.999997003
+                    }
+                ]
+            }
+        },
+        {
+            "Cameroon": {
+                "sectors": [
+                    {
+                        "Bio-diversity": 6649999.999994355
+                    },
+                    {
+                        "Emergency food aid": 980999.9999948664
+                    },
+                    {
+                        "Material relief assistance and services": 41108981.14996844
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 4551299.999992073
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 21479115.809981205
+                    }
+                ]
+            }
+        },
+        {
+            "Central African Republic": {
+                "sectors": [
+                    {
+                        "Child soldiers (Prevention and demobilisation)": 6564999.999996367
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 1479999.999998182
+                    },
+                    {
+                        "Emergency food aid": 12472199.999983305
+                    },
+                    {
+                        "Material relief assistance and services": 138932379.00997806
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 3634999.999988047
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 39202251.00996427
+                    }
+                ]
+            }
+        },
+        {
+            "Chad": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 439999.999992648
+                    },
+                    {
+                        "Emergency food aid": 10296799.99997932
+                    },
+                    {
+                        "Material relief assistance and services": 22312761.72997783
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 31454099.99999296
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 15243252.069980536
+                    }
+                ]
+            }
+        },
+        {
+            "China": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 6719999.999989629
+                    },
+                    {
+                        "Human rights": 7339999.999997441
+                    }
+                ]
+            }
+        },
+        {
+            "Colombia": {
+                "sectors": [
+                    {
+                        "Agrarian reform": 547193.9999999665
+                    },
+                    {
+                        "Agricultural development": 9999999.999991708
+                    },
+                    {
+                        "Agricultural policy and administrative management": 8999999.999993404
+                    },
+                    {
+                        "Anti-corruption organisations and institutions": 499999.9999948056
+                    },
+                    {
+                        "Business support services and institutions": 999999.9999983016
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 59622025.4399503
+                    },
+                    {
+                        "Decentralisation and support to subnational government": 9099999.999994105
+                    },
+                    {
+                        "Democratic participation and civil society": 13380828.539984317
+                    },
+                    {
+                        "Emergency food aid": 3051999.999995616
+                    },
+                    {
+                        "Employment policy and administrative management": 3599999.9999991
+                    },
+                    {
+                        "Ending violence against women and girls ": -77583.9999951864
+                    },
+                    {
+                        "Environmental policy and administrative management": 2999999.999994905
+                    },
+                    {
+                        "Formal sector financial intermediaries": 2722500.999992513
+                    },
+                    {
+                        "Human rights": 60183281.0299734
+                    },
+                    {
+                        "Information services": 7381.0299983184
+                    },
+                    {
+                        "Justice, law and order policy, planning and administration": 3662863.119988164
+                    },
+                    {
+                        "Legal and judicial development": 389350.099995221
+                    },
+                    {
+                        "Material relief assistance and services": 14704329.999967476
+                    },
+                    {
+                        "Participation in international peacekeeping operations": 14999999.9999919
+                    },
+                    {
+                        "Public sector policy and administrative management": 14599169.99999469
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 6145999.9999901345
+                    },
+                    {
+                        "Reintegration and SALW control": 2999999.999994905
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 11088169.999976924
+                    },
+                    {
+                        "Reproductive health care": 7589999.999999189
+                    },
+                    {
+                        "Rural development": 8142451.399993026
+                    },
+                    {
+                        "Sectors not specified": 2225724.0599972806
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 1099999.999999001
+                    },
+                    {
+                        "Social dialogue": 1499999.999993107
+                    }
+                ]
+            }
+        },
+        {
+            "Congo, The Democratic Republic Of The": {
+                "sectors": [
+                    {
+                        "Agricultural development": 44999999.99999309
+                    },
+                    {
+                        "Basic health care": 49999999.99999329
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 60259999.999971166
+                    },
+                    {
+                        "Democratic participation and civil society": 66531035.82996431
+                    },
+                    {
+                        "Education/training in banking and financial services": 8706251.349998282
+                    },
+                    {
+                        "Emergency food aid": 68404135.99998128
+                    },
+                    {
+                        "Environmental policy and administrative management": 731010.4099973281
+                    },
+                    {
+                        "Human rights": 7703791.999988616
+                    },
+                    {
+                        "Material relief assistance and services": 204951911.21995938
+                    },
+                    {
+                        "Media and free flow of information": 7499999.999991607
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 2997499.999994453
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 65362963.99996455
+                    },
+                    {
+                        "Reproductive health care": 30199031.99997578
+                    },
+                    {
+                        "Rural land policy and management": 14999999.9999919
+                    },
+                    {
+                        "Sectors not specified": 385643.4999955344
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 3999999.999993206
+                    },
+                    {
+                        "Vocational training": 5999999.9999985
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 19153899.9999886
+                    }
+                ]
+            }
+        },
+        {
+            "Cuba": {
+                "sectors": [
+                    {
+                        "Culture and recreation": -48983.9999917536
+                    },
+                    {
+                        "Decentralisation and support to subnational government": 3486244.000000363
+                    },
+                    {
+                        "Democratic participation and civil society": 7663799.999989938
+                    },
+                    {
+                        "Education/training in banking and financial services": 1999999.999996603
+                    },
+                    {
+                        "Formal sector financial intermediaries": 4499999.999996702
+                    },
+                    {
+                        "Legal and judicial development": 999999.9999983016
+                    },
+                    {
+                        "Sectors not specified": 155297.9999968272
+                    },
+                    {
+                        "Statistical capacity building": 1194999.999998796
+                    }
+                ]
+            }
+        },
+        {
+            "C\u00f4te D\u2019ivoire": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 8739999.99999854
+                    }
+                ]
+            }
+        },
+        {
+            "Djibouti": {
+                "sectors": [
+                    {
+                        "Material relief assistance and services": 11910199.99999467
+                    }
+                ]
+            }
+        },
+        {
+            "Ecuador": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 250613.9999998776
+                    }
+                ]
+            }
+        },
+        {
+            "Egypt": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 19150937.939954124
+                    },
+                    {
+                        "Human rights": 931149.9999919368
+                    },
+                    {
+                        "Multisector education/training": 250686.9799976664
+                    },
+                    {
+                        "Rural development": 151405.0099925688
+                    }
+                ]
+            }
+        },
+        {
+            "El Salvador": {
+                "sectors": [
+                    {
+                        "Business support services and institutions": 254115.2999974464
+                    },
+                    {
+                        "Democratic participation and civil society": 9217133.059972385
+                    },
+                    {
+                        "Human rights": 2999999.999994905
+                    },
+                    {
+                        "Low-cost housing": 1470419.99999784
+                    },
+                    {
+                        "Multisector education/training": 137001.289992984
+                    },
+                    {
+                        "Rural development": 944999.999997048
+                    }
+                ]
+            }
+        },
+        {
+            "Eritrea": {
+                "sectors": [
+                    {
+                        "Material relief assistance and services": 2155299.999993396
+                    }
+                ]
+            }
+        },
+        {
+            "Ethiopia": {
+                "sectors": [
+                    {
+                        "Advanced technical and managerial training": 2999999.999994905
+                    },
+                    {
+                        "Agricultural co-operatives": 4999999.999991508
+                    },
+                    {
+                        "Agricultural land resources": 14999999.9999919
+                    },
+                    {
+                        "Business development services": 1349999.999992059
+                    },
+                    {
+                        "Business support services and institutions": 45181994.99999568
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 2643846.979984358
+                    },
+                    {
+                        "Democratic participation and civil society": 31847237.849961042
+                    },
+                    {
+                        "Disaster prevention and preparedness": 9999999.999991708
+                    },
+                    {
+                        "Education policy and administrative management": 1899999.999995904
+                    },
+                    {
+                        "Education/training in banking and financial services": 8119999.999999419
+                    },
+                    {
+                        "Emergency food aid": 37769349.99998327
+                    },
+                    {
+                        "Ending violence against women and girls ": 3999999.999993206
+                    },
+                    {
+                        "Energy generation, renewable sources \u2013 multiple technologies": 6462299.999998656
+                    },
+                    {
+                        "Environmental education/ training": 59899999.99999299
+                    },
+                    {
+                        "Environmental policy and administrative management": 2195199.999993658
+                    },
+                    {
+                        "Forestry development": 75999999.9999839
+                    },
+                    {
+                        "Human rights": 18630733.19998035
+                    },
+                    {
+                        "Legal and judicial development": 39319.7899980312
+                    },
+                    {
+                        "Material relief assistance and services": 154584209.55995843
+                    },
+                    {
+                        "Media and free flow of information": 3399999.999997702
+                    },
+                    {
+                        "Medical research": 15308999.999986941
+                    },
+                    {
+                        "Other general public services": 1003122.6499865232
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 490499.999993088
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 14466229.999969617
+                    },
+                    {
+                        "Reproductive health care": 45939999.99998924
+                    },
+                    {
+                        "Research/scientific institutions": 26983431.199966244
+                    },
+                    {
+                        "Social/ welfare services": 31999999.99999779
+                    },
+                    {
+                        "Vocational training": 9999999.999991708
+                    },
+                    {
+                        "Waste management / disposal": 17099999.999989208
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 15061065.669983853
+                    }
+                ]
+            }
+        },
+        {
+            "Gambia": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 3759209.999998164
+                    }
+                ]
+            }
+        },
+        {
+            "Georgia": {
+                "sectors": [
+                    {
+                        "Anti-corruption organisations and institutions": 3885442.8399875658
+                    },
+                    {
+                        "Democratic participation and civil society": 12164118.959974896
+                    },
+                    {
+                        "Ending violence against women and girls ": 11999999.999997
+                    },
+                    {
+                        "Environmental policy and administrative management": 7134654.279988397
+                    },
+                    {
+                        "Human rights": 12369972.199995719
+                    },
+                    {
+                        "Public sector policy and administrative management": 19699999.999990005
+                    },
+                    {
+                        "Responsible business conduct": 2399999.9999994
+                    },
+                    {
+                        "STD control including HIV/AIDS": 2591679.999996166
+                    },
+                    {
+                        "Sanitation - large systems": 14999999.9999919
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 10349999.999985464
+                    },
+                    {
+                        "Statistical capacity building": 7642444.089990046
+                    },
+                    {
+                        "Trade facilitation": 114799.9999981608
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 4999999.999991508
+                    }
+                ]
+            }
+        },
+        {
+            "Ghana": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 1493153.9999978836
+                    },
+                    {
+                        "STD control including HIV/AIDS": 1825459.999991813
+                    }
+                ]
+            }
+        },
+        {
+            "Guatemala": {
+                "sectors": [
+                    {
+                        "Agricultural financial services": 87752.38999318561
+                    },
+                    {
+                        "Anti-corruption organisations and institutions": 7532890.259998852
+                    },
+                    {
+                        "Business support services and institutions": 100558.2699931392
+                    },
+                    {
+                        "Democratic participation and civil society": 9495765.039971713
+                    },
+                    {
+                        "Ending violence against women and girls ": 11199999.999991408
+                    },
+                    {
+                        "Environmental research": 1999999.999996603
+                    },
+                    {
+                        "Human rights": 70298460.55997992
+                    },
+                    {
+                        "Informal/semi-formal financial intermediaries": 183906.8199915048
+                    },
+                    {
+                        "Legal and judicial development": 49999999.99999329
+                    },
+                    {
+                        "Legislatures and political parties": 7999999.999995103
+                    },
+                    {
+                        "Low-cost housing": 6479.9999928288
+                    },
+                    {
+                        "Material relief assistance and services": 2648399.9999939073
+                    },
+                    {
+                        "Multisector education/training": 429973.2899942976
+                    },
+                    {
+                        "Ombudsman": 531672.5399929272
+                    },
+                    {
+                        "Public sector policy and administrative management": 19099999.99997712
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 1524599.999995817
+                    },
+                    {
+                        "Reproductive health care": 1432324.279997309
+                    },
+                    {
+                        "Rural development": 37827260.18996745
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 29499129.49998443
+                    },
+                    {
+                        "Statistical capacity building": 6027603.379993786
+                    }
+                ]
+            }
+        },
+        {
+            "Guinea": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": -131409.999999252
+                    }
+                ]
+            }
+        },
+        {
+            "Haiti": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 3815613.9999926495
+                    },
+                    {
+                        "Material relief assistance and services": 3675247.309990635
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 4975719.999991985
+                    },
+                    {
+                        "Sectors not specified": 1531890.069993266
+                    }
+                ]
+            }
+        },
+        {
+            "Honduras": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 15123115.869951619
+                    },
+                    {
+                        "Human rights": 3182056.4799889494
+                    },
+                    {
+                        "Low-cost housing": 1330559.999996191
+                    },
+                    {
+                        "Reproductive health care": 124102.4699974968
+                    },
+                    {
+                        "Rural development": 277199.9999944992
+                    }
+                ]
+            }
+        },
+        {
+            "India": {
+                "sectors": [
+                    {
+                        "Business support services and institutions": 166407.279997284
+                    },
+                    {
+                        "Democratic participation and civil society": 19920242.90997133
+                    },
+                    {
+                        "Environmental policy and administrative management": 2057999.999998399
+                    },
+                    {
+                        "Multisector education/training": 319199.409993456
+                    }
+                ]
+            }
+        },
+        {
+            "Indonesia": {
+                "sectors": [
+                    {
+                        "Bio-diversity": 7279999.999995284
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 1699999.999994506
+                    },
+                    {
+                        "Democratic participation and civil society": 1002455.99999951
+                    },
+                    {
+                        "Environmental policy and administrative management": 1714999.999997218
+                    },
+                    {
+                        "Material relief assistance and services": 12644609.99998128
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 2430889.999998206
+                    }
+                ]
+            }
+        },
+        {
+            "Iran, Islamic Republic Of": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 1492716.0399899473
+                    },
+                    {
+                        "Emergency food aid": 980999.9999948664
+                    },
+                    {
+                        "Material relief assistance and services": 10400599.999992874
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 490499.999993088
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 1961999.999998423
+                    }
+                ]
+            }
+        },
+        {
+            "Iraq": {
+                "sectors": [
+                    {
+                        "Emergency food aid": 6975999.999992463
+                    },
+                    {
+                        "Ending violence against women and girls ": 19999999.9999921
+                    },
+                    {
+                        "Legislatures and political parties": 9999999.999991708
+                    },
+                    {
+                        "Material relief assistance and services": 101640419.99994566
+                    },
+                    {
+                        "Multisector aid for basic social services": 83999999.99999638
+                    },
+                    {
+                        "Public sector policy and administrative management": 24349335.999990493
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 3487999.999996231
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 43815478.32997106
+                    },
+                    {
+                        "Removal of land mines and explosive remnants of war": 89999999.99998617
+                    }
+                ]
+            }
+        },
+        {
+            "Jordan": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 1547043.749995421
+                    },
+                    {
+                        "Ending violence against women and girls ": 29079085.479990847
+                    },
+                    {
+                        "Facilitation of orderly, safe, regular and responsible migration and mobility": 9999999.999991708
+                    },
+                    {
+                        "Material relief assistance and services": 45199199.999990866
+                    },
+                    {
+                        "Multisector education/training": 113017.5699930576
+                    },
+                    {
+                        "Public sector policy and administrative management": 152319.9999959064
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 429999.9999995304
+                    },
+                    {
+                        "Reproductive health care": 51876.9199946592
+                    },
+                    {
+                        "Rural development": 140808.7699982352
+                    },
+                    {
+                        "Water resources conservation (including data collection)": 6749999.999995054
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 1080217.419994339
+                    }
+                ]
+            }
+        },
+        {
+            "Kenya": {
+                "sectors": [
+                    {
+                        "Agricultural development": 7138246.209994966
+                    },
+                    {
+                        "Agricultural financial services": 28499999.99999939
+                    },
+                    {
+                        "Anti-corruption organisations and institutions": 9097525.370000036
+                    },
+                    {
+                        "Basic drinking water supply and basic sanitation": 16602324.049976366
+                    },
+                    {
+                        "Bio-diversity": 2659999.999994265
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 6825579.7499845205
+                    },
+                    {
+                        "Democratic participation and civil society": 75261822.61994833
+                    },
+                    {
+                        "Disaster prevention and preparedness": 39706586.99997744
+                    },
+                    {
+                        "Domestic Revenue Mobilisation": 7642890.999997611
+                    },
+                    {
+                        "Education and training in water supply and sanitation": 2999999.999994905
+                    },
+                    {
+                        "Elections": -461782.9499914512
+                    },
+                    {
+                        "Emergency food aid": 2346599.999988007
+                    },
+                    {
+                        "Environmental policy and administrative management": 5144999.999991653
+                    },
+                    {
+                        "Forestry development": 27557562.99999737
+                    },
+                    {
+                        "Human rights": 13499999.999990107
+                    },
+                    {
+                        "Legal and judicial development": 14999999.9999919
+                    },
+                    {
+                        "Low-cost housing": 1005479.99999964
+                    },
+                    {
+                        "Material relief assistance and services": 38542299.999967456
+                    },
+                    {
+                        "Multisector education/training": 738409.6799981135
+                    },
+                    {
+                        "Public sector policy and administrative management": 640317.1199899823
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 4368899.999983428
+                    },
+                    {
+                        "Rural development": 6869020.369992624
+                    },
+                    {
+                        "STD control including HIV/AIDS": 6737840.5199857205
+                    },
+                    {
+                        "Sectors not specified": 195745.7199916656
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 24449999.99998846
+                    },
+                    {
+                        "Social protection and welfare services policy, planning and administration": 39999999.999984205
+                    },
+                    {
+                        "Solar energy": 2299999.999998701
+                    },
+                    {
+                        "Statistical capacity building": 7370326.099997691
+                    },
+                    {
+                        "Urban development": 429023.9999989368
+                    },
+                    {
+                        "Urban development and management": 30809827.919972964
+                    },
+                    {
+                        "Vocational training": 15999999.9999989
+                    },
+                    {
+                        "Waste management / disposal": 2593999.52998812
+                    }
+                ]
+            }
+        },
+        {
+            "Kosovo": {
+                "sectors": [
+                    {
+                        "Business support services and institutions": 1079999.999995385
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 4999999.999991508
+                    },
+                    {
+                        "Decentralisation and support to subnational government": 9999999.999991708
+                    },
+                    {
+                        "Democratic participation and civil society": 26581871.21995213
+                    },
+                    {
+                        "Domestic Revenue Mobilisation": 9722036.999997295
+                    },
+                    {
+                        "Environmental education/ training": 970238.2399915608
+                    },
+                    {
+                        "Environmental policy and administrative management": 16581185.88999337
+                    },
+                    {
+                        "Facilitation of orderly, safe, regular and responsible migration and mobility": 513144.9999990072
+                    },
+                    {
+                        "Forestry development": 2999999.999994905
+                    },
+                    {
+                        "Human rights": 437702.9999930496
+                    },
+                    {
+                        "Public sector policy and administrative management": 22411592.539978694
+                    },
+                    {
+                        "Research/scientific institutions": 69999.9999952752
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 6537356.509981305
+                    },
+                    {
+                        "Statistical capacity building": 489443.3799946632
+                    },
+                    {
+                        "Urban development and management": -428196.0399977089
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 2229999.999994735
+                    }
+                ]
+            }
+        },
+        {
+            "Kyrgyzstan": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 250613.9999998776
+                    }
+                ]
+            }
+        },
+        {
+            "Lao People\u2019s Democratic Republic": {
+                "sectors": [
+                    {
+                        "Material relief assistance and services": 1123799.99999809
+                    }
+                ]
+            }
+        },
+        {
+            "Lebanon": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 5256369.929995495
+                    },
+                    {
+                        "Emergency food aid": 5994999.999997596
+                    },
+                    {
+                        "Facilitation of orderly, safe, regular and responsible migration and mobility": 1140139.409995188
+                    },
+                    {
+                        "Material relief assistance and services": 50132999.9999565
+                    },
+                    {
+                        "Multisector education/training": 1439898.869997338
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 3657499.9999921154
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 16903355.809992705
+                    },
+                    {
+                        "STD control including HIV/AIDS": 108071.239999356
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 3449999.999998051
+                    }
+                ]
+            }
+        },
+        {
+            "Lesotho": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 1539999.999991649
+                    }
+                ]
+            }
+        },
+        {
+            "Liberia": {
+                "sectors": [
+                    {
+                        "Agricultural development": 31182980.76999367
+                    },
+                    {
+                        "Agricultural land resources": -153336.0999962448
+                    },
+                    {
+                        "Basic life skills for youth": 17999999.9999955
+                    },
+                    {
+                        "Business support services and institutions": 11573577.929995585
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 27322160.999987867
+                    },
+                    {
+                        "Democratic participation and civil society": 15814060.319996906
+                    },
+                    {
+                        "Employment policy and administrative management": 738288.8099955432
+                    },
+                    {
+                        "Ending violence against women and girls ": 19999999.999983415
+                    },
+                    {
+                        "Energy generation, renewable sources \u2013 multiple technologies": 4398377.999997831
+                    },
+                    {
+                        "Fishery development": 3318524.999995572
+                    },
+                    {
+                        "Human rights": 9999999.999991708
+                    },
+                    {
+                        "Legal and judicial development": 9709092.999993984
+                    },
+                    {
+                        "Material relief assistance and services": 3199999.999996303
+                    },
+                    {
+                        "Media and free flow of information": 6719999.999998321
+                    },
+                    {
+                        "Multisector education/training": 1609999.999995614
+                    },
+                    {
+                        "Public Finance Management (PFM)": -3341483.059998975
+                    },
+                    {
+                        "Public sector policy and administrative management": 15684941.499992926
+                    },
+                    {
+                        "Reproductive health care": 9999999.999991708
+                    },
+                    {
+                        "Road transport": 39854748.32998027
+                    },
+                    {
+                        "Rural development": 294895.999994292
+                    },
+                    {
+                        "Sectors not specified": 91801.129998024
+                    },
+                    {
+                        "Security system management and reform": 7023804.99999146
+                    },
+                    {
+                        "Social protection and welfare services policy, planning and administration": 22999999.999987002
+                    },
+                    {
+                        "Statistical capacity building": 36999999.999998
+                    },
+                    {
+                        "Trade policy and administrative management": 5604477.969988945
+                    },
+                    {
+                        "Urban land policy and management": 278941.4999971344
+                    },
+                    {
+                        "Vocational training": 14999999.9999919
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 10999999.9999987
+                    }
+                ]
+            }
+        },
+        {
+            "Libyan Arab Jamahiriya": {
+                "sectors": [
+                    {
+                        "Emergency food aid": 5013999.99999404
+                    },
+                    {
+                        "Legal and judicial development": -23271.149991456
+                    },
+                    {
+                        "Material relief assistance and services": 20863211.2199899
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 2506999.999992675
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 13496499.999989476
+                    }
+                ]
+            }
+        },
+        {
+            "Macedonia, The Former Yugoslav Republic Of": {
+                "sectors": [
+                    {
+                        "Business support services and institutions": 1457999.999994204
+                    },
+                    {
+                        "Democratic participation and civil society": 1079999.999995385
+                    },
+                    {
+                        "Education facilities and training": 80734.99999747681
+                    },
+                    {
+                        "Environmental policy and administrative management": 611699.9999941441
+                    },
+                    {
+                        "Justice, law and order policy, planning and administration": 1499999.999993107
+                    },
+                    {
+                        "Local government finance": 4372499.999999722
+                    },
+                    {
+                        "Public sector policy and administrative management": 26410952.99996578
+                    },
+                    {
+                        "Rural development": 161999.999994528
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 2569999.999995374
+                    }
+                ]
+            }
+        },
+        {
+            "Madagascar": {
+                "sectors": [
+                    {
+                        "Bio-diversity": 6369999.999995873
+                    }
+                ]
+            }
+        },
+        {
+            "Malawi": {
+                "sectors": [
+                    {
+                        "Basic drinking water supply and basic sanitation": 892430.9499885265
+                    },
+                    {
+                        "Bio-diversity": 1026775.3899930984
+                    },
+                    {
+                        "Business support services and institutions": 165217.4399993256
+                    },
+                    {
+                        "Democratic participation and civil society": 9888508.789980914
+                    },
+                    {
+                        "Multisector education/training": 357971.1199970904
+                    },
+                    {
+                        "Reproductive health care": 4494489.319989461
+                    },
+                    {
+                        "Rural development": 4882499.999996335
+                    }
+                ]
+            }
+        },
+        {
+            "Malaysia": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 659999.9999976624
+                    },
+                    {
+                        "Environmental policy and administrative management": 3978799.99999285
+                    }
+                ]
+            }
+        },
+        {
+            "Mali": {
+                "sectors": [
+                    {
+                        "Agricultural financial services": 969875.6499978408
+                    },
+                    {
+                        "Basic drinking water supply and basic sanitation": 29999999.9999925
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 12974904.029983
+                    },
+                    {
+                        "Democratic participation and civil society": 21533330.169987112
+                    },
+                    {
+                        "Elections": 14999999.9999919
+                    },
+                    {
+                        "Emergency food aid": 3800999.9999919897
+                    },
+                    {
+                        "Energy generation, renewable sources \u2013 multiple technologies": 11649999.999994554
+                    },
+                    {
+                        "Environmental education/ training": 499999.9999948056
+                    },
+                    {
+                        "Environmental policy and administrative management": 43551337.999986015
+                    },
+                    {
+                        "Forestry policy and administrative management": 65772690.57998854
+                    },
+                    {
+                        "Human rights": 15967059.18998578
+                    },
+                    {
+                        "Livestock/veterinary services": 19999999.9999921
+                    },
+                    {
+                        "Material relief assistance and services": 34229061.72997186
+                    },
+                    {
+                        "Public sector policy and administrative management": 25392202.769985687
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 40564499.999981984
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 16457248.32998222
+                    },
+                    {
+                        "Statistical capacity building": 14979515.409987975
+                    },
+                    {
+                        "Water sector policy and administrative management": 3595688.529979097
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 14999999.9999919
+                    }
+                ]
+            }
+        },
+        {
+            "Mauritania": {
+                "sectors": [
+                    {
+                        "Disaster prevention and preparedness": 559999.9999969632
+                    },
+                    {
+                        "Emergency food aid": 2089799.999998934
+                    },
+                    {
+                        "Material relief assistance and services": 20001780.559979558
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 11102799.999985998
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 908299.9999938888
+                    }
+                ]
+            }
+        },
+        {
+            "Mexico": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 250613.9999998776
+                    }
+                ]
+            }
+        },
+        {
+            "Moldova, Republic Of": {
+                "sectors": [
+                    {
+                        "Administrative costs (non-sector allocable)": 143348.9999981256
+                    },
+                    {
+                        "Agricultural development": -1023.999999768
+                    },
+                    {
+                        "Agricultural policy and administrative management": 1240617.999987612
+                    },
+                    {
+                        "Business support services and institutions": 6199999.999999898
+                    },
+                    {
+                        "Decentralisation and support to subnational government": 3759999.999993267
+                    },
+                    {
+                        "Democratic participation and civil society": 25905135.999936327
+                    },
+                    {
+                        "Domestic Revenue Mobilisation": 4599999.9999887105
+                    },
+                    {
+                        "Energy conservation and demand-side efficiency": -183907.3299963192
+                    },
+                    {
+                        "Energy regulation": 2176999.999993843
+                    },
+                    {
+                        "Environmental policy and administrative management": 4973409.999996956
+                    },
+                    {
+                        "Human rights": 1708840.999994522
+                    },
+                    {
+                        "Information and communication technology (ICT)": 3999999.999993206
+                    },
+                    {
+                        "Legal and judicial development": 932604.9999973272
+                    },
+                    {
+                        "Legislatures and political parties": 5999999.9999985
+                    },
+                    {
+                        "Media and free flow of information": 1611470.999992039
+                    },
+                    {
+                        "Multisector education/training": 354095.6499956592
+                    },
+                    {
+                        "Police": 12039109.99999347
+                    },
+                    {
+                        "Public sector policy and administrative management": 80169.9999941592
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 32199999.999981813
+                    },
+                    {
+                        "Statistical capacity building": 616227.0899966209
+                    },
+                    {
+                        "Urban development": 9999999.999991708
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 8599999.999999298
+                    }
+                ]
+            }
+        },
+        {
+            "Mozambique": {
+                "sectors": [
+                    {
+                        "Agricultural development": 41985512.979994394
+                    },
+                    {
+                        "Agricultural financial services": 23999999.999994
+                    },
+                    {
+                        "Agricultural policy and administrative management": 13999999.9999936
+                    },
+                    {
+                        "Bio-diversity": 16749999.999995448
+                    },
+                    {
+                        "Business support services and institutions": 2822273.199997999
+                    },
+                    {
+                        "Decentralisation and support to subnational government": 6472208.979992383
+                    },
+                    {
+                        "Democratic participation and civil society": 94578697.69998369
+                    },
+                    {
+                        "Education/training in banking and financial services": 1996033.9999866055
+                    },
+                    {
+                        "Electric power transmission and distribution": 51033319.94998749
+                    },
+                    {
+                        "Employment policy and administrative management": 14999999.9999919
+                    },
+                    {
+                        "Energy generation, renewable sources \u2013 multiple technologies": 21546173.939965934
+                    },
+                    {
+                        "Energy policy and administrative management": 11221712.889984202
+                    },
+                    {
+                        "Environmental policy and administrative management": 41099999.9999919
+                    },
+                    {
+                        "Forestry policy and administrative management": 9499999.9999969
+                    },
+                    {
+                        "Human rights": 80257016.7799954
+                    },
+                    {
+                        "Hydro-electric power plants": 5619999.999990629
+                    },
+                    {
+                        "Local government administration": 59336.5499942328
+                    },
+                    {
+                        "Participation in international peacekeeping operations": 83046.17999239921
+                    },
+                    {
+                        "Public Finance Management (PFM)": 17424999.99999583
+                    },
+                    {
+                        "Reproductive health care": 46433704.72999035
+                    },
+                    {
+                        "Research/scientific institutions": 73691118.7999763
+                    },
+                    {
+                        "Road transport": -91152.47999332081
+                    },
+                    {
+                        "Rural development": 4349965.2699765675
+                    },
+                    {
+                        "Social protection and welfare services policy, planning and administration": 27165883.599984422
+                    },
+                    {
+                        "Statistical capacity building": 25287531.849986594
+                    },
+                    {
+                        "Tax policy and administration support": 1880773.999996356
+                    },
+                    {
+                        "Technological research and development": 11272190.829995183
+                    }
+                ]
+            }
+        },
+        {
+            "Myanmar": {
+                "sectors": [
+                    {
+                        "Administrative costs (non-sector allocable)": 223351.2499919112
+                    },
+                    {
+                        "Anti-corruption organisations and institutions": 10999999.9999987
+                    },
+                    {
+                        "Basic health care": 99999999.99999528
+                    },
+                    {
+                        "Child soldiers (Prevention and demobilisation)": 1664999.999996868
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 27851427.19996682
+                    },
+                    {
+                        "Decentralisation and support to subnational government": 20499999.999986906
+                    },
+                    {
+                        "Democratic participation and civil society": 21820402.299976617
+                    },
+                    {
+                        "Emergency food aid": 7653999.99999338
+                    },
+                    {
+                        "Facilitation of orderly, safe, regular and responsible migration and mobility": 1157138.399999974
+                    },
+                    {
+                        "Health education": 5099999.999992208
+                    },
+                    {
+                        "Human rights": 18201980.399981957
+                    },
+                    {
+                        "Labour rights": 3999999.999993206
+                    },
+                    {
+                        "Material relief assistance and services": 33744699.99997084
+                    },
+                    {
+                        "Media and free flow of information": 18088649.159968786
+                    },
+                    {
+                        "Multisector education/training": 2016044.569993385
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 2506999.999992675
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 14295999.999977598
+                    },
+                    {
+                        "Reproductive health care": 86999999.9999826
+                    },
+                    {
+                        "Rural development": 923372.919995868
+                    },
+                    {
+                        "Statistical capacity building": 2399999.9999994
+                    },
+                    {
+                        "Urban land policy and management": 3399999.999997702
+                    }
+                ]
+            }
+        },
+        {
+            "Nepal": {
+                "sectors": [
+                    {
+                        "Basic drinking water supply": 656847.7199950465
+                    },
+                    {
+                        "Business support services and institutions": 44669.89999599841
+                    },
+                    {
+                        "Democratic participation and civil society": 3228632.919982311
+                    },
+                    {
+                        "Multisector education/training": 157585.4799934608
+                    },
+                    {
+                        "Rural development": 79413.15999309841
+                    }
+                ]
+            }
+        },
+        {
+            "Nicaragua": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 7590993.969982833
+                    },
+                    {
+                        "Human rights": 4999999.999991508
+                    },
+                    {
+                        "Low-cost housing": 604799.9999998488
+                    },
+                    {
+                        "Multisector education/training": 4177289.029997773
+                    },
+                    {
+                        "Rural development": 1948319.999999078
+                    }
+                ]
+            }
+        },
+        {
+            "Niger": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 1492716.0399899473
+                    },
+                    {
+                        "Disaster prevention and preparedness": 559999.9999969632
+                    },
+                    {
+                        "Emergency food aid": 2692919.9999842276
+                    },
+                    {
+                        "Material relief assistance and services": 37562011.99996035
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 490499.999993088
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 13537128.329986464
+                    }
+                ]
+            }
+        },
+        {
+            "Nigeria": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 6057676.939985603
+                    },
+                    {
+                        "Emergency food aid": 11376999.999988645
+                    },
+                    {
+                        "Material relief assistance and services": 123244699.99995354
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 12871299.9999842
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 53533670.569980785
+                    },
+                    {
+                        "Sectors not specified": 1354045.769991864
+                    }
+                ]
+            }
+        },
+        {
+            "Pakistan": {
+                "sectors": [
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 7054996.001597159
+                    },
+                    {
+                        "Democratic participation and civil society": 9765435.749988435
+                    },
+                    {
+                        "Material relief assistance and services": 33289199.999992765
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 2831999.999999292
+                    },
+                    {
+                        "Reproductive health care": 575999.9999911656
+                    }
+                ]
+            }
+        },
+        {
+            "Palestinian Territory, Occupied": {
+                "sectors": [
+                    {
+                        "Administrative costs (non-sector allocable)": 175016.9999922408
+                    },
+                    {
+                        "Basic health care": 14399999.9999964
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 6020197.99999871
+                    },
+                    {
+                        "Culture and recreation": 24504945.999981947
+                    },
+                    {
+                        "Democratic participation and civil society": 28966948.07995819
+                    },
+                    {
+                        "Disaster prevention and preparedness": 959999.9999997601
+                    },
+                    {
+                        "Emergency food aid": 15681999.999993548
+                    },
+                    {
+                        "Environmental policy and administrative management": 4099474.9999899
+                    },
+                    {
+                        "Human rights": 23151754.589992594
+                    },
+                    {
+                        "Legal and judicial development": 2746973.169999029
+                    },
+                    {
+                        "Material relief assistance and services": 117798595.78996657
+                    },
+                    {
+                        "Media and free flow of information": 13599999.999990806
+                    },
+                    {
+                        "Medical services": 7899999.999994405
+                    },
+                    {
+                        "Multisector aid for basic social services": 29999999.9999925
+                    },
+                    {
+                        "Multisector education/training": 3216263.299991626
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 7520999.999995404
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 42870238.999990605
+                    },
+                    {
+                        "Reproductive health care": 11218454.169997148
+                    },
+                    {
+                        "Research/scientific institutions": 1649999.999994156
+                    },
+                    {
+                        "Rural development": 573353.3999993184
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 7999999.999995103
+                    },
+                    {
+                        "Urban development and management": 116653824.99998073
+                    },
+                    {
+                        "Waste management / disposal": 1389999.999999291
+                    },
+                    {
+                        "Water resources conservation (including data collection)": 6749999.999995054
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 19567999.999992214
+                    }
+                ]
+            }
+        },
+        {
+            "Papua New Guinea": {
+                "sectors": [
+                    {
+                        "Material relief assistance and services": 6039999.999997042
+                    }
+                ]
+            }
+        },
+        {
+            "Paraguay": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 7142039.869978642
+                    },
+                    {
+                        "Information and communication technology (ICT)": 229899.8199955968
+                    },
+                    {
+                        "Multisector education/training": 411399.6799999968
+                    },
+                    {
+                        "Reproductive health care": 1421748.879999314
+                    },
+                    {
+                        "Rural development": 1874879.999993448
+                    }
+                ]
+            }
+        },
+        {
+            "Peru": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 5445521.239991912
+                    },
+                    {
+                        "Environmental policy and administrative management": 1646399.999995243
+                    },
+                    {
+                        "Reproductive health care": 1076899.149997229
+                    },
+                    {
+                        "Rural development": 1451998.859995138
+                    }
+                ]
+            }
+        },
+        {
+            "Philippines": {
+                "sectors": [
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 10199999.999984415
+                    },
+                    {
+                        "Democratic participation and civil society": 16811794.29996805
+                    },
+                    {
+                        "Emergency food aid": 2100999.9999887925
+                    },
+                    {
+                        "Environmental policy and administrative management": 5076399.999998368
+                    },
+                    {
+                        "Low-cost housing": 1237679.999994694
+                    },
+                    {
+                        "Material relief assistance and services": 15886219.999974504
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 490499.999993088
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 6516179.9999844115
+                    },
+                    {
+                        "Rural development": 2404079.999998747
+                    }
+                ]
+            }
+        },
+        {
+            "Rwanda": {
+                "sectors": [
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 48726999.9999804
+                    },
+                    {
+                        "Democratic participation and civil society": 45807339.99996804
+                    },
+                    {
+                        "Education policy and administrative management": 222525.9999963288
+                    },
+                    {
+                        "Educational research": 218575.6999934472
+                    },
+                    {
+                        "Employment policy and administrative management": 46226186.7299879
+                    },
+                    {
+                        "Environmental policy and administrative management": 34679657.25998793
+                    },
+                    {
+                        "Formal sector financial intermediaries": 7718899.999998162
+                    },
+                    {
+                        "Higher education": 17795553.999940217
+                    },
+                    {
+                        "Informal/semi-formal financial intermediaries": 5314969.999996834
+                    },
+                    {
+                        "Media and free flow of information": 5663469.999999009
+                    },
+                    {
+                        "Participation in international peacekeeping operations": -13121.9999915616
+                    },
+                    {
+                        "Research/scientific institutions": 31159242.339949083
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 894855.9999991752
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 14922188.789992766
+                    }
+                ]
+            }
+        },
+        {
+            "Senegal": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 751841.999999633
+                    },
+                    {
+                        "Emergency food aid": 1619999.999997422
+                    },
+                    {
+                        "Environmental policy and administrative management": 274399.9999992072
+                    }
+                ]
+            }
+        },
+        {
+            "Serbia": {
+                "sectors": [
+                    {
+                        "Decentralisation and support to subnational government": 9290784.999993227
+                    },
+                    {
+                        "Democratic participation and civil society": 17701359.099974804
+                    },
+                    {
+                        "Employment policy and administrative management": 7999999.999995103
+                    },
+                    {
+                        "Environmental policy and administrative management": 12096214.389983688
+                    },
+                    {
+                        "Facilitation of orderly, safe, regular and responsible migration and mobility": 363999.999996288
+                    },
+                    {
+                        "Fire and rescue services": 1899999.999995904
+                    },
+                    {
+                        "Human rights": 9999999.999983016
+                    },
+                    {
+                        "Legal and judicial development": 4999999.999991508
+                    },
+                    {
+                        "Public Finance Management (PFM)": 3252999.999988505
+                    },
+                    {
+                        "Public sector policy and administrative management": 2195399.999998908
+                    },
+                    {
+                        "Security system management and reform": 26318110.44998297
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 7028799.999996794
+                    },
+                    {
+                        "Waste management / disposal": 4489092.349990302
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 4714099.999990222
+                    }
+                ]
+            }
+        },
+        {
+            "Sierra Leone": {
+                "sectors": [
+                    {
+                        "Sectors not specified": 4220004.149977077
+                    }
+                ]
+            }
+        },
+        {
+            "Somalia": {
+                "sectors": [
+                    {
+                        "Basic drinking water supply": 9999999.999991708
+                    },
+                    {
+                        "Basic health care": 29999999.9999925
+                    },
+                    {
+                        "Business support services and institutions": 15151490.999989036
+                    },
+                    {
+                        "Child soldiers (Prevention and demobilisation)": 4599999.999997402
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 64361905.18994356
+                    },
+                    {
+                        "Decentralisation and support to subnational government": 435426.6999961368
+                    },
+                    {
+                        "Democratic participation and civil society": 39393876.86996831
+                    },
+                    {
+                        "Disaster prevention and preparedness": 4084488.0
+                    },
+                    {
+                        "Emergency food aid": 27891999.999993756
+                    },
+                    {
+                        "Employment policy and administrative management": 8322993.999992772
+                    },
+                    {
+                        "Energy generation, renewable sources \u2013 multiple technologies": 1349999.999992059
+                    },
+                    {
+                        "Facilitation of orderly, safe, regular and responsible migration and mobility": 2999999.999986214
+                    },
+                    {
+                        "Material relief assistance and services": 144199249.9999696
+                    },
+                    {
+                        "Media and free flow of information": 13471999.99999374
+                    },
+                    {
+                        "Multisector aid": 376503706.9999747
+                    },
+                    {
+                        "Multisector aid for basic social services": -63581.2799930496
+                    },
+                    {
+                        "Public sector policy and administrative management": 19243959.99999515
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 22787911.999984954
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 14248499.999986392
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 18599999.9999997
+                    },
+                    {
+                        "Statistical capacity building": 11946136.619992794
+                    },
+                    {
+                        "Trade education/training": 2966669.46999319
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": -858560.7299913575
+                    }
+                ]
+            }
+        },
+        {
+            "South Africa": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 10131808.649991272
+                    },
+                    {
+                        "Environmental policy and administrative management": 5419399.99999955
+                    },
+                    {
+                        "Informal/semi-formal financial intermediaries": 680023.3399997472
+                    },
+                    {
+                        "Low-cost housing": 955136.3099917752
+                    },
+                    {
+                        "Multisector education/training": 255687.7199948208
+                    },
+                    {
+                        "Reproductive health care": 7014999.999999514
+                    },
+                    {
+                        "Rural development": 2905554.289992919
+                    }
+                ]
+            }
+        },
+        {
+            "South Sudan": {
+                "sectors": [
+                    {
+                        "Basic health care": 63999999.99999559
+                    },
+                    {
+                        "Child soldiers (Prevention and demobilisation)": 4899999.999999499
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 14183061.599997815
+                    },
+                    {
+                        "Democratic participation and civil society": 15654999.999988664
+                    },
+                    {
+                        "Emergency food aid": 5982999.999995427
+                    },
+                    {
+                        "Health policy and administrative management": 158276.9999933856
+                    },
+                    {
+                        "Material relief assistance and services": 156196924.0099571
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 2016499.999999586
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 29607007.679975543
+                    },
+                    {
+                        "Reproductive health care": 227543.9999969232
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 4999999.999991508
+                    }
+                ]
+            }
+        },
+        {
+            "Sri Lanka": {
+                "sectors": [
+                    {
+                        "Business support services and institutions": 1162799.99999645
+                    },
+                    {
+                        "Democratic participation and civil society": 9842441.799989432
+                    },
+                    {
+                        "Emergency food aid": 980999.9999948664
+                    },
+                    {
+                        "Material relief assistance and services": 1471499.999996645
+                    },
+                    {
+                        "Multisector education/training": 1276393.86999828
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 490499.999993088
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 1961999.999998423
+                    },
+                    {
+                        "Rural development": 28799.9999999928
+                    },
+                    {
+                        "Sanitation - large systems": 968019.9999921721
+                    }
+                ]
+            }
+        },
+        {
+            "Sudan": {
+                "sectors": [
+                    {
+                        "Agricultural development": 29999999.9999925
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 21418080.23998916
+                    },
+                    {
+                        "Democratic participation and civil society": 7783993.249974634
+                    },
+                    {
+                        "Emergency food aid": 46562831.99998311
+                    },
+                    {
+                        "Energy generation, renewable sources \u2013 multiple technologies": 3250909.999998381
+                    },
+                    {
+                        "Human rights": 24999999.9999923
+                    },
+                    {
+                        "Material relief assistance and services": 73902009.36996755
+                    },
+                    {
+                        "Multisector aid": 44999999.99999309
+                    },
+                    {
+                        "Participation in international peacekeeping operations": 19999999.9999921
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 817499.9999913769
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 22631767.99997661
+                    },
+                    {
+                        "Reproductive health care": 7499999.999991607
+                    },
+                    {
+                        "Sectors not specified": 2499999.999991409
+                    },
+                    {
+                        "Water sector policy and administrative management": 19999999.9999921
+                    }
+                ]
+            }
+        },
+        {
+            "Swaziland": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 763613.9999970335
+                    }
+                ]
+            }
+        },
+        {
+            "Syrian Arab Republic": {
+                "sectors": [
+                    {
+                        "Basic life skills for youth and adults": 20999999.99999909
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 9899999.999991007
+                    },
+                    {
+                        "Democratic participation and civil society": 60502356.40995234
+                    },
+                    {
+                        "Emergency food aid": 8512999.999992259
+                    },
+                    {
+                        "Legal and judicial development": 16699999.9999951
+                    },
+                    {
+                        "Local government administration": 4799999.9999988
+                    },
+                    {
+                        "Material relief assistance and services": 240218765.00994718
+                    },
+                    {
+                        "Media and free flow of information": 38095329.99999042
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 2016499.999999586
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 63617409.899971
+                    },
+                    {
+                        "Sectors not specified": 9999999.999991708
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 133966182.99998474
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 20382233.46000093
+                    }
+                ]
+            }
+        },
+        {
+            "Tajikistan": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 1066225.7499922295
+                    }
+                ]
+            }
+        },
+        {
+            "Tanzania, United Republic Of": {
+                "sectors": [
+                    {
+                        "Administrative costs (non-sector allocable)": 102896.4599945928
+                    },
+                    {
+                        "Agricultural development": 16499999.999985013
+                    },
+                    {
+                        "Agricultural financial services": -1988475.500001463
+                    },
+                    {
+                        "Agricultural land resources": 15048799.99999551
+                    },
+                    {
+                        "Agricultural services": 2671874.99999424
+                    },
+                    {
+                        "Basic life skills for youth": 3999999.999993206
+                    },
+                    {
+                        "Basic life skills for youth and adults": 149999.9999923584
+                    },
+                    {
+                        "Bio-diversity": 6299999.999991908
+                    },
+                    {
+                        "Business support services and institutions": 16916359.13999991
+                    },
+                    {
+                        "Child soldiers (Prevention and demobilisation)": 1669999.999997772
+                    },
+                    {
+                        "Democratic participation and civil society": 30129646.369955044
+                    },
+                    {
+                        "Education policy and administrative management": 212371240.00996625
+                    },
+                    {
+                        "Educational research": 2040535.999994616
+                    },
+                    {
+                        "Electric power transmission and distribution": 172488686.47998977
+                    },
+                    {
+                        "Employment policy and administrative management": 584247.9999970369
+                    },
+                    {
+                        "Ending violence against women and girls ": 10599999.9999959
+                    },
+                    {
+                        "Energy generation, renewable sources \u2013 multiple technologies": 73999999.99999599
+                    },
+                    {
+                        "Energy policy and administrative management": 16202296.739983127
+                    },
+                    {
+                        "Environmental policy and administrative management": 4593621.039991712
+                    },
+                    {
+                        "Financial policy and administrative management": 49999999.9999846
+                    },
+                    {
+                        "Human rights": 25175699.999985833
+                    },
+                    {
+                        "Industrial development": 1579999.999998881
+                    },
+                    {
+                        "Legal and judicial development": 7999999.999995103
+                    },
+                    {
+                        "Low-cost housing": 1784159.999998251
+                    },
+                    {
+                        "Macroeconomic policy": 780107.9899887792
+                    },
+                    {
+                        "Material relief assistance and services": 3260949.999999501
+                    },
+                    {
+                        "Media and free flow of information": 6500889.989984037
+                    },
+                    {
+                        "Multisector aid": 224999999.9999915
+                    },
+                    {
+                        "Primary education": 16424018.479985207
+                    },
+                    {
+                        "Primary education equivalent for adults": 1211438.999998483
+                    },
+                    {
+                        "Public sector policy and administrative management": 41099999.999991894
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 1397549.999999786
+                    },
+                    {
+                        "Reproductive health care": 5979999.999994884
+                    },
+                    {
+                        "Research/scientific institutions": 70128899.37994169
+                    },
+                    {
+                        "Rural development": 4596479.999997113
+                    },
+                    {
+                        "Rural land policy and management": 7999999.999995103
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 186365.4399918864
+                    },
+                    {
+                        "Social protection and welfare services policy, planning and administration": 2999999.999994905
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 5999999.9999985
+                    }
+                ]
+            }
+        },
+        {
+            "Thailand": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 11375172.659969065
+                    },
+                    {
+                        "Environmental policy and administrative management": 891799.999999596
+                    },
+                    {
+                        "Multisector education/training": 829624.9899930912
+                    },
+                    {
+                        "Reproductive health care": 1408303.0699854698
+                    }
+                ]
+            }
+        },
+        {
+            "Timor-leste": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 3706525.7699830206
+                    }
+                ]
+            }
+        },
+        {
+            "Togo": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 8367849.999986005
+                    },
+                    {
+                        "Reproductive health care": 2653055.999992037
+                    },
+                    {
+                        "STD control including HIV/AIDS": 426490.29998298717
+                    }
+                ]
+            }
+        },
+        {
+            "Tunisia": {
+                "sectors": [
+                    {
+                        "Decentralisation and support to subnational government": 20089999.999990992
+                    },
+                    {
+                        "Democratic participation and civil society": 2255525.999998899
+                    },
+                    {
+                        "Facilitation of orderly, safe, regular and responsible migration and mobility": 1029312.489997692
+                    },
+                    {
+                        "Legal and judicial development": -31028.1999972984
+                    }
+                ]
+            }
+        },
+        {
+            "Turkey": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 4751667.879972717
+                    },
+                    {
+                        "Ending violence against women and girls ": 18419999.999984536
+                    },
+                    {
+                        "Facilitation of orderly, safe, regular and responsible migration and mobility": 686719.9999986696
+                    },
+                    {
+                        "Human Rights": 21772458.8784
+                    },
+                    {
+                        "Human rights": -109219.9599966312
+                    },
+                    {
+                        "Legal and judicial development": 1495002.719991809
+                    },
+                    {
+                        "Material relief assistance and services": 35489999.99999439
+                    },
+                    {
+                        "Media and free flow of information": 2783999.999999304
+                    },
+                    {
+                        "Multisector education/training": 811725.4099951488
+                    },
+                    {
+                        "Social/ welfare services": 1623360.999996101
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 34063859.99992147
+                    }
+                ]
+            }
+        },
+        {
+            "Uganda": {
+                "sectors": [
+                    {
+                        "Administrative costs (non-sector allocable)": 905786.1999771624
+                    },
+                    {
+                        "Agricultural development": 45092999.99999253
+                    },
+                    {
+                        "Agro-industries": 9999999.999991708
+                    },
+                    {
+                        "Basic drinking water supply and basic sanitation": 737401.7299939416
+                    },
+                    {
+                        "Basic health care": 165939.379997076
+                    },
+                    {
+                        "Bio-diversity": 2099999.999997302
+                    },
+                    {
+                        "Business support services and institutions": -318457.8599951304
+                    },
+                    {
+                        "Civilian peace-building, conflict prevention and resolution": 3204889.839982765
+                    },
+                    {
+                        "Democratic participation and civil society": 77220412.31995195
+                    },
+                    {
+                        "Disaster prevention and preparedness": 758999.9999981808
+                    },
+                    {
+                        "Emergency food aid": 3220999.9999914095
+                    },
+                    {
+                        "Ending violence against women and girls ": 52999999.99999689
+                    },
+                    {
+                        "Energy generation, renewable sources \u2013 multiple technologies": 9999999.999991708
+                    },
+                    {
+                        "Environmental policy and administrative management": 2400999.999999581
+                    },
+                    {
+                        "Health policy and administrative management": 847397.1199999608
+                    },
+                    {
+                        "Human rights": 35999999.99999969
+                    },
+                    {
+                        "Industrial policy and administrative management": -611251.6799952504
+                    },
+                    {
+                        "Legal and judicial development": 40937399.999990314
+                    },
+                    {
+                        "Low-cost housing": 2624399.999998258
+                    },
+                    {
+                        "Material relief assistance and services": 35242339.69997716
+                    },
+                    {
+                        "Multisector education/training": 6094999.999998296
+                    },
+                    {
+                        "Public sector policy and administrative management": 1056103.4499912218
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 11729499.999982852
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 5161999.999986036
+                    },
+                    {
+                        "Reproductive health care": 44529135.99999251
+                    },
+                    {
+                        "Research/scientific institutions": 54199902.999985225
+                    },
+                    {
+                        "Rural development": 3426299.999997242
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 42449999.99998396
+                    }
+                ]
+            }
+        },
+        {
+            "Ukraine": {
+                "sectors": [
+                    {
+                        "Administrative costs (non-sector allocable)": 24089.9999941008
+                    },
+                    {
+                        "Decentralisation and support to subnational government": 33256174.999982882
+                    },
+                    {
+                        "Democratic participation and civil society": 22880607.699970935
+                    },
+                    {
+                        "District heating and cooling": 9999999.999991708
+                    },
+                    {
+                        "Domestic Revenue Mobilisation": 405312.9999852816
+                    },
+                    {
+                        "Emergency food aid": 2833999.999999654
+                    },
+                    {
+                        "Energy education/training": -1679.9999971752
+                    },
+                    {
+                        "Energy policy and administrative management": 9999999.999991708
+                    },
+                    {
+                        "Environmental policy and administrative management": 23588241.11997758
+                    },
+                    {
+                        "Financial policy and administrative management": 6999999.999996802
+                    },
+                    {
+                        "Formal sector financial intermediaries": 3999999.999993206
+                    },
+                    {
+                        "Higher education": 2999999.999994905
+                    },
+                    {
+                        "Human rights": 16836669.999982093
+                    },
+                    {
+                        "Information and communication technology (ICT)": 128389.9999990536
+                    },
+                    {
+                        "Material relief assistance and services": 28527899.99997142
+                    },
+                    {
+                        "Media and free flow of information": 12798613.999991672
+                    },
+                    {
+                        "Monetary institutions": 787029.249995136
+                    },
+                    {
+                        "Public Finance Management (PFM)": 12682456.599993391
+                    },
+                    {
+                        "Public sector policy and administrative management": 15979499.999986498
+                    },
+                    {
+                        "Radio/television/print media": 4435801.729986499
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 1416999.999995482
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 11660999.999987852
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 3499999.999998401
+                    },
+                    {
+                        "Social services (incl youth development and women+ children)": 951910.9999954993
+                    },
+                    {
+                        "Vocational training": 6999999.999996802
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 13999999.9999936
+                    }
+                ]
+            }
+        },
+        {
+            "Venezuela, Bolivarian Republic Of": {
+                "sectors": [
+                    {
+                        "Material relief assistance and services": 14996899.999993082
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 9949499.999999957
+                    }
+                ]
+            }
+        },
+        {
+            "Viet Nam": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 7713281.999981817
+                    },
+                    {
+                        "Rural development": 628559.9999996256
+                    }
+                ]
+            }
+        },
+        {
+            "Yemen": {
+                "sectors": [
+                    {
+                        "Democratic participation and civil society": 3888183.4899997395
+                    },
+                    {
+                        "Emergency food aid": 50905999.999983296
+                    },
+                    {
+                        "Ending violence against women and girls ": 8999999.999993404
+                    },
+                    {
+                        "Material relief assistance and services": 208923266.469951
+                    },
+                    {
+                        "Reconstruction relief and rehabilitation": 10659279.999993064
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 71139043.28998503
+                    }
+                ]
+            }
+        },
+        {
+            "Zambia": {
+                "sectors": [
+                    {
+                        "Agricultural development": 67828740.32998028
+                    },
+                    {
+                        "Agricultural research": 2999999.999994905
+                    },
+                    {
+                        "Agricultural services": 8999999.999993404
+                    },
+                    {
+                        "Anti-corruption organisations and institutions": 6483526.999985513
+                    },
+                    {
+                        "Basic health care": 1542007.0799913672
+                    },
+                    {
+                        "Basic nutrition": 24699999.999990206
+                    },
+                    {
+                        "Bio-diversity": 419999.9999977224
+                    },
+                    {
+                        "Biofuel-fired power plants": 3162533.7500008917
+                    },
+                    {
+                        "Business support services and institutions": 919999.999992528
+                    },
+                    {
+                        "Democratic participation and civil society": 31974958.409972306
+                    },
+                    {
+                        "Electric power transmission and distribution": 29999999.9999925
+                    },
+                    {
+                        "Employment policy and administrative management": 126053.469994356
+                    },
+                    {
+                        "Energy education/training": -784606.9899939552
+                    },
+                    {
+                        "Energy generation, renewable sources \u2013 multiple technologies": 83224842.969977
+                    },
+                    {
+                        "Environmental policy and administrative management": 934874.0699898888
+                    },
+                    {
+                        "Formal sector financial intermediaries": 9199999.999994803
+                    },
+                    {
+                        "Health education": 1249999.999991359
+                    },
+                    {
+                        "Health personnel development": 23199999.9999971
+                    },
+                    {
+                        "Health policy and administrative management": 107537917.49997562
+                    },
+                    {
+                        "Human rights": 5340434.999997701
+                    },
+                    {
+                        "Information and communication technology (ICT)": 2620849.9999897946
+                    },
+                    {
+                        "Low-cost housing": 1511999.999995277
+                    },
+                    {
+                        "Media and free flow of information": 5999999.9999985
+                    },
+                    {
+                        "Medical services": 4360606.999991367
+                    },
+                    {
+                        "National audit": 3999999.999993206
+                    },
+                    {
+                        "Public sector policy and administrative management": -12822.2799927192
+                    },
+                    {
+                        "Relief co-ordination; protection and support services": 1015741.729994904
+                    },
+                    {
+                        "Reproductive health care": 27946118.009969376
+                    },
+                    {
+                        "Rural development": 3788999.999998509
+                    },
+                    {
+                        "Social mitigation of HIV/AIDS": -28357.5099993912
+                    },
+                    {
+                        "Social protection and welfare services policy, planning and administration": 999999.9999983016
+                    },
+                    {
+                        "Social/ welfare services": 8049999.999995453
+                    },
+                    {
+                        "Women\u2019s equality organisations and institutions": 5197999.999983855
+                    }
+                ]
+            }
+        },
+        {
+            "Zimbabwe": {
+                "sectors": [
+                    {
+                        "Agricultural development": 14999999.9999919
+                    },
+                    {
+                        "Anti-corruption organisations and institutions": 9504499.999989025
+                    },
+                    {
+                        "Basic health care": 44999999.999984406
+                    },
+                    {
+                        "Basic life skills for youth": 138787.8199984512
+                    },
+                    {
+                        "Basic sanitation": 15999999.9999989
+                    },
+                    {
+                        "Business support services and institutions": 35864.59000010399
+                    },
+                    {
+                        "Democratic participation and civil society": 34398829.82992012
+                    },
+                    {
+                        "Ending violence against women and girls ": 9999999.999991708
+                    },
+                    {
+                        "Energy generation, renewable sources \u2013 multiple technologies": 5858263.999994357
+                    },
+                    {
+                        "Environmental education/ training": 3499999.999998401
+                    },
+                    {
+                        "Health policy and administrative management": 2499999.999991409
+                    },
+                    {
+                        "Human rights": 49981939.389951065
+                    },
+                    {
+                        "Informal/semi-formal financial intermediaries": 56873.03999267521
+                    },
+                    {
+                        "Multisector education/training": 817737.7899924577
+                    },
+                    {
+                        "Reproductive health care": 82217376.6899634
+                    },
+                    {
+                        "Rural development": 74185303.49996121
+                    },
+                    {
+                        "STD control including HIV/AIDS": -1705920.589996913
+                    },
+                    {
+                        "Sectors not specified": 1809910.469992774
+                    },
+                    {
+                        "Small and medium-sized enterprises (SME) development": 6149827.9799972065
+                    },
+                    {
+                        "Social mitigation of HIV/AIDS": 1999999.999996603
+                    },
+                    {
+                        "Statistical capacity building": 3499999.999998401
+                    }
+                ]
+            }
+        }
+    ]
+}

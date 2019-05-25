@@ -1,11 +1,15 @@
+import 'dart:convert';
+
 import 'package:baggcrushers/CountryInformation.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 class DetailedView extends StatelessWidget {
   final CountryInformation _countryInformation;
 
   DetailedView(this._countryInformation);
+
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +23,85 @@ class DetailedView extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
           ),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          color: Color(0xC8C8C8),
+      body: FutureBuilder(
+          future: loadJson(),
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
+            if (snapshot.hasData) {
+              var data = json.decode(snapshot.data);
+              List<dynamic> countries = data["countries"];
+              var sectorsMap;
+
+              for (Map<String, dynamic> country in countries) {
+                if(country.containsKey(_countryInformation.countryName)){
+                  sectorsMap = country[_countryInformation.countryName]["sectors"];
+                }
+              }
+
+              List<Widget> widgetList = new List();
+
+              for(var sector in sectorsMap){
+                sector.forEach((key, value) => widgetList.add(new BarCard(key, value, _countryInformation.aidMoney)));
+              }
+              
+              return DetailedViewMainBody(_countryInformation, widgetList);
+
+            } else {
+              return CircularPercentIndicator(
+                radius: 10,
+              );
+            }
+          },
         ),
+
+    );
+  }
+}
+
+ class BarCard extends StatelessWidget {
+   final String _title;
+   final double _value;
+   final double _maxValue;
+
+   BarCard(this._title, this._value, this._maxValue);
+
+   @override
+   Widget build(BuildContext context) {
+     return Card(
+       child: Column(
+         children: <Widget>[
+           Row(
+             mainAxisAlignment: MainAxisAlignment.center,
+             children: <Widget>[
+               Text(_title),
+             ],
+           ),
+           Row(
+             children: <Widget> [
+               LinearPercentIndicator(
+                 width: 200,
+                 lineHeight: 14,
+                 percent: _value / _maxValue,
+                 backgroundColor: Colors.grey,
+                 progressColor: Colors.blue,
+               ),
+             ]
+           ),
+         ],
+       ),
+     );
+   }
+ }
+
+
+class DetailedViewMainBody extends StatelessWidget {
+  final CountryInformation _countryInformation;
+  final List<Widget> _barCardList;
+
+  DetailedViewMainBody(this._countryInformation, this._barCardList);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -43,14 +122,25 @@ class DetailedView extends StatelessWidget {
                 )
               ],
             ),
-            AidOverview(_countryInformation),
-            CorruptionOverview(_countryInformation),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: SizedBox(
+                    height: 600,
+                    child: ListView(children: _barCardList,)))
+              ],
+            ),
+            //AidOverview(_countryInformation),
+            //CorruptionOverview(_countryInformation),
+            //Column(children: _barCardList,),
+              
+           
           ],
         ),
-      ),
-    );
+      );
   }
 }
+
 
 
 
@@ -138,4 +228,10 @@ class TextCard extends StatelessWidget {
         ),
     );
   }
+}
+
+
+
+Future<String> loadJson() async {
+  return await rootBundle.loadString("data/sectors-by-country.json");
 }
