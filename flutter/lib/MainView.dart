@@ -251,7 +251,7 @@ class CardTile extends StatelessWidget {
       onTap: () => Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => DetailedView(_countryInformation))),
+              builder: (context) => DetailedView(_countryInformation, _totalAidMoney))),
       child: Card(
         elevation: 4,
         shape: RoundedRectangleBorder(
