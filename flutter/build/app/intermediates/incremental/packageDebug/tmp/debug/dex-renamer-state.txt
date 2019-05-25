@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-#Sat May 25 17:22:37 CEST 2019
-base.0=/home/viktor/dev/2019-gothenburg-baggCrushers/flutter/build/app/intermediates/transforms/dexMerger/debug/0
-=======
-#Sat May 25 17:19:35 CEST 2019
-base.0=/Users/henriklagergren/Documents/flutter_apps/baggcrushers/flutter/build/app/intermediates/transforms/dexMerger/debug/0
->>>>>>> Added searchbar and filters
-path.0=classes.dex
-renamed.0=classes.dex
