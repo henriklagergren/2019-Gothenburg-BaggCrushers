@@ -13,15 +13,9 @@ class MainView extends StatefulWidget {
   _MainViewState createState() => _MainViewState();
 }
 
-
-enum FILTERVALUES{
-  CORRUPTION,
-  AID
-}
+enum FILTERVALUES { CORRUPTION, AID }
 
 class _MainViewState extends State<MainView> {
-
- 
   FILTERVALUES dropdownValue = FILTERVALUES.CORRUPTION;
   bool descending = true;
   String userSearch = "";
@@ -41,54 +35,53 @@ class _MainViewState extends State<MainView> {
     super.dispose();
   }
 
-  List<CountryInformation> sortBy(FILTERVALUES property, List<CountryInformation> list){
-    if(property == FILTERVALUES.CORRUPTION){
+  List<CountryInformation> sortBy(
+      FILTERVALUES property, List<CountryInformation> list) {
+    if (property == FILTERVALUES.CORRUPTION) {
       list.sort((a, b) => a.corruptionIndex.compareTo(b.corruptionIndex));
-    }else if(property == FILTERVALUES.AID){
+    } else if (property == FILTERVALUES.AID) {
       list.sort((a, b) => a.aidMoney.compareTo(b.aidMoney));
     }
-    
-    if(userSearch != ""){
-    List<CountryInformation> filteredList = new List();
-    for (var countryInfo in list) {
-      if(countryInfo.countryName.contains(userSearch)){
-        filteredList.add(countryInfo);
+
+    if (userSearch != "") {
+      List<CountryInformation> filteredList = new List();
+      for (var countryInfo in list) {
+        if (countryInfo.countryName.contains(userSearch)) {
+          filteredList.add(countryInfo);
+        }
       }
-    }
-    return filteredList;
-    }else{
-    return list;
+      return filteredList;
+    } else {
+      return list;
     }
   }
-  
 
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: (){
+      onWillPop: () {
         setState(() {
           userSearch = "";
           _textEditingController.clear();
         });
       },
-          child: Scaffold(
-
+      child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size(double.maxFinite,130),
+          preferredSize: Size(double.maxFinite, 130),
           child: Container(
             color: Colors.white,
             child: Column(
               children: <Widget>[
                 SizedBox(height: 40),
                 _SearchBar((search) {
-                        setState(() {
-                          userSearch = search;
-                        });
-                        _scrollController.animateTo(
-                            _scrollController.position.minScrollExtent,
-                            duration: Duration(milliseconds: 300),
-                            curve: Curves.ease);
-                      }, "Sök land",_textEditingController),
+                  setState(() {
+                    userSearch = search;
+                  });
+                  _scrollController.animateTo(
+                      _scrollController.position.minScrollExtent,
+                      duration: Duration(milliseconds: 300),
+                      curve: Curves.ease);
+                }, "Sök land", _textEditingController),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -100,58 +93,70 @@ class _MainViewState extends State<MainView> {
                     ),
                     SizedBox(width: 5),
                     DropdownButton<FILTERVALUES>(
-                    value: dropdownValue,
-                    onChanged: (FILTERVALUES newValue) {
-                      setState(() {
-                        dropdownValue = newValue;
-                      });
-                    },
-                    items: <FILTERVALUES>[FILTERVALUES.CORRUPTION, FILTERVALUES.AID]
-                        .map<DropdownMenuItem<FILTERVALUES>>((FILTERVALUES value) {
-                      return DropdownMenuItem<FILTERVALUES>(
-                        value: value,
-                        child: Text(value.toString().split('.').last),
-                      );
-                    }).toList(),
-                  ),
-                   IconButton(
-                    onPressed: () => setState((){
-                      descending = !descending;
-                    }),
-                    icon: Icon(descending? MaterialCommunityIcons.getIconData("sort-descending"):MaterialCommunityIcons.getIconData("sort-ascending"),size: 30,),
-                  ),
+                      value: dropdownValue,
+                      onChanged: (FILTERVALUES newValue) {
+                        setState(() {
+                          dropdownValue = newValue;
+                        });
+                      },
+                      items: <FILTERVALUES>[
+                        FILTERVALUES.CORRUPTION,
+                        FILTERVALUES.AID
+                      ].map<DropdownMenuItem<FILTERVALUES>>(
+                          (FILTERVALUES value) {
+                        return DropdownMenuItem<FILTERVALUES>(
+                          value: value,
+                          child: Text(value.toString().split('.').last),
+                        );
+                      }).toList(),
+                    ),
+                    IconButton(
+                      onPressed: () => setState(() {
+                            descending = !descending;
+                          }),
+                      icon: Icon(
+                        descending
+                            ? MaterialCommunityIcons.getIconData(
+                                "sort-descending")
+                            : MaterialCommunityIcons.getIconData(
+                                "sort-ascending"),
+                        size: 30,
+                      ),
+                    ),
                   ],
                 ),
-               
-            ],
+              ],
             ),
           ),
-
         ),
         body: FutureBuilder(
-              future: loadJson(),
-              builder: (BuildContext context, AsyncSnapshot snapshot){
-                if(snapshot.hasData){
-                  var data = json.decode(snapshot.data);
-                var rest = data["data"] as List;
-                List<CountryInformation> list = rest.map<CountryInformation>((json) => CountryInformation.fromJson(json)).toList();
-                list.removeWhere((value) => value == null); // This should probably not be done this way since it takes O(n)
-                list = sortBy(dropdownValue, list);
-                
-                if(descending == true){
-                  
-                  List<CountryInformation> reversedList = list.reversed.toList();
-                  return CardTiles(reversedList, _scrollController);
-                }
-                  
-                  return CardTiles(list,_scrollController);
-                }else{
-                  return CircularPercentIndicator(radius: 10,);
-                }
-              },
-            ),
-          
-      
+          future: loadJson(),
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
+            if (snapshot.hasData) {
+              var data = json.decode(snapshot.data);
+              var rest = data["data"] as List;
+              List<CountryInformation> list = rest
+                  .map<CountryInformation>(
+                      (json) => CountryInformation.fromJson(json))
+                  .toList();
+              list.removeWhere((value) =>
+                  value ==
+                  null); // This should probably not be done this way since it takes O(n)
+              list = sortBy(dropdownValue, list);
+
+              if (descending == true) {
+                List<CountryInformation> reversedList = list.reversed.toList();
+                return CardTiles(reversedList, _scrollController);
+              }
+
+              return CardTiles(list, _scrollController);
+            } else {
+              return CircularPercentIndicator(
+                radius: 10,
+              );
+            }
+          },
+        ),
       ),
     );
   }
@@ -161,7 +166,7 @@ class CardTiles extends StatelessWidget {
   final List<CountryInformation> _countries;
   final _scrollController;
 
-  CardTiles(this._countries,this._scrollController);
+  CardTiles(this._countries, this._scrollController);
 
   @override
   Widget build(BuildContext context) {
@@ -170,12 +175,12 @@ class CardTiles extends StatelessWidget {
       controller: _scrollController,
       itemCount: _countries.length,
       itemBuilder: (BuildContext context, int index) {
-        return CardTile(_countries.elementAt(index),totalAidMoney);
+        return CardTile(_countries.elementAt(index), totalAidMoney);
       },
     );
   }
 
-  double sumAidMoney(List<CountryInformation> _countries){
+  double sumAidMoney(List<CountryInformation> _countries) {
     double sum = 0;
     for (var country in _countries) {
       sum += country.aidMoney;
@@ -188,7 +193,7 @@ class CardTile extends StatelessWidget {
   final CountryInformation _countryInformation;
   final double _totalAidMoney;
 
-  CardTile(this._countryInformation,this._totalAidMoney);
+  CardTile(this._countryInformation, this._totalAidMoney);
 
   @override
   Widget build(BuildContext context) {
@@ -200,29 +205,36 @@ class CardTile extends StatelessWidget {
       child: Card(
         elevation: 4,
         shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
+          borderRadius: BorderRadius.circular(15.0),
+        ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Expanded(child: Column(
+              Expanded(
+                child: Column(
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                         Text(
-                      _countryInformation.countryName.toUpperCase(),
-                      style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
-                    ),
-                    SizedBox(width: 5,),
-                    Image.network("https://www.countryflags.io/"+ _countryInformation.countryCode +"/flat/64.png",scale: 2.5,),
+                        Text(
+                          _countryInformation.countryName.toUpperCase(),
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700, fontSize: 20),
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Image.network(
+                          "https://www.countryflags.io/" +
+                              _countryInformation.countryCode +
+                              "/flat/64.png",
+                          scale: 2.5,
+                        ),
                       ],
                     ),
-                   
                     SizedBox(
                       height: 10,
                     ),
@@ -233,26 +245,81 @@ class CardTile extends StatelessWidget {
                           radius: 70,
                           lineWidth: 6,
                           progressColor: Colors.green,
-                          percent: _countryInformation.aidMoney/_totalAidMoney,
+                          percent:
+                              _countryInformation.aidMoney / _totalAidMoney,
                           circularStrokeCap: CircularStrokeCap.round,
-                          center: Text(_countryInformation.aidMoney/1000000 < 100 ? (_countryInformation.aidMoney/1000000).toStringAsFixed(2) + "\nMSEK":(_countryInformation.aidMoney/1000000).toStringAsFixed(1) + "\nMSEK",textAlign: TextAlign.center,),
-                          footer: Text("Stödpengar",style: TextStyle(fontWeight: FontWeight.w300,fontSize: 15),),
+                          center: Text(
+                            _countryInformation.aidMoney / 1000000 < 100
+                                ? (_countryInformation.aidMoney / 1000000)
+                                        .toStringAsFixed(2) +
+                                    "\nMSEK"
+                                : (_countryInformation.aidMoney / 1000000)
+                                        .toStringAsFixed(1) +
+                                    "\nMSEK",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 15),
+                          ),
+                          footer: Text(
+                            "Stödpengar",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w300, fontSize: 15),
+                          ),
                           animation: true,
                           animationDuration: 1000,
                         ),
                         SizedBox(
-                          width: 30,
+                          width: 10,
                         ),
                         CircularPercentIndicator(
                           radius: 70,
                           lineWidth: 6,
                           progressColor: Colors.red,
-                          percent: _countryInformation.corruptionIndex/100,
+                          percent: _countryInformation.corruptionIndex / 100,
                           circularStrokeCap: CircularStrokeCap.round,
-                          center: Text(_countryInformation.corruptionIndex.toStringAsFixed(0),textAlign: TextAlign.center,style: TextStyle(fontSize: 20),),
-                          footer: Text("Korruption",style: TextStyle(fontWeight: FontWeight.w300,fontSize: 15),),
+                          center: Text(
+                            _countryInformation.corruptionIndex
+                                    .toStringAsFixed(0) +
+                                "\nCPI",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 15),
+                          ),
+                          footer: Text(
+                            "Korruptionsindex",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w300, fontSize: 15),
+                          ),
                           animation: true,
                           animationDuration: 1000,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                         Padding(
+                           padding: const EdgeInsets.only(right: 20),
+                           child: Container(
+                              width: 1,
+                              height: 70,
+                              decoration:
+                                  BoxDecoration(border: Border.all(width: 1)),
+                            ),
+                         ),
+                        
+                        Column(
+                          children: <Widget>[
+                            Text(
+                              (_countryInformation.aidMoney /
+                                      _countryInformation.corruptionIndex /
+                                      1000000)
+                                  .toStringAsFixed(3),
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 20),
+                            ),
+                            Text(
+                              "MSEK/CPI",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w300, fontSize: 15),
+                            ),
+                          ],
                         ),
                       ],
                     ),
