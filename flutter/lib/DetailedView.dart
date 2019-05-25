@@ -15,7 +15,7 @@ class DetailedView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lightGreen,
+        backgroundColor: Colors.grey,
         title: Text("Country information"),
         centerTitle: true,
         leading: IconButton(
