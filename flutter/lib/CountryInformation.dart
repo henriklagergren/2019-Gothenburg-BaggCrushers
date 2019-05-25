@@ -1,7 +1,7 @@
 class CountryInformation {
   String _countryName;
-  String _corruptionIndex;
-  String _aidMoney;
+  int _corruptionIndex;
+  int _aidMoney;
 
   CountryInformation(this._countryName,this._corruptionIndex,this._aidMoney);
 

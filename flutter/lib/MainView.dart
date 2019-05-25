@@ -23,7 +23,8 @@ class _MainViewState extends State<MainView> {
  
 
 
-  FILTERVALUES dropdownValue = FILTERVALUES.CORRUPTION;  
+  FILTERVALUES dropdownValue = FILTERVALUES.CORRUPTION;
+  bool descending = false;  
 
   List<CountryInformation> sortBy(FILTERVALUES property, List<CountryInformation> list){
     if(property == FILTERVALUES.CORRUPTION){
@@ -41,7 +42,7 @@ class _MainViewState extends State<MainView> {
 
       appBar: PreferredSize(
         preferredSize: Size(60,60),
-        child: Column(
+        child: Row(
           children: <Widget>[
             SizedBox(height: 30),
             DropdownButton<FILTERVALUES>(
@@ -58,7 +59,7 @@ class _MainViewState extends State<MainView> {
                     child: Text(value.toString().split('.').last),
                   );
                 }).toList(),
-              ),
+              )
         ],),
 
       ),
@@ -149,7 +150,7 @@ class CardTile extends StatelessWidget {
                           progressColor: Colors.green,
                           percent: 0.2,
                           circularStrokeCap: CircularStrokeCap.round,
-                          center: Text(_countryInformation.aidMoney + "B"),
+                          center: Text(_countryInformation.aidMoney.toString() + "B"),
                           footer: Text("Aidmoney",style: TextStyle(fontWeight: FontWeight.w300,fontSize: 15),),
                           animation: true,
                           animationDuration: 1000,
@@ -163,7 +164,7 @@ class CardTile extends StatelessWidget {
                           progressColor: Colors.red,
                           percent: 0.2,
                           circularStrokeCap: CircularStrokeCap.round,
-                          center: Text(_countryInformation.corruptionIndex),
+                          center: Text(_countryInformation.corruptionIndex.toString()),
                           footer: Text("Corruption",style: TextStyle(fontWeight: FontWeight.w300,fontSize: 15),),
                           animation: true,
                           animationDuration: 1000,

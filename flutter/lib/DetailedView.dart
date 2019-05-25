@@ -35,7 +35,7 @@ class DetailedView extends StatelessWidget {
                 ),
                 SizedBox(width: 10,),
                 Text(              
-                  _countryInformation.countryName.toUpperCase(),         
+                  _countryInformation.countryName.toString().toUpperCase(),         
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 34,
@@ -106,7 +106,7 @@ class CorruptionOverview extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            TextCard("Corruption Index", _countryInformation.corruptionIndex, "")
+            TextCard("Corruption Index", _countryInformation.corruptionIndex.toString(), "")
             
           ],
         ),
