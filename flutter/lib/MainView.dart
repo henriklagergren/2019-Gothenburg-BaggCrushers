@@ -165,20 +165,30 @@ class CardTiles extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double totalAidMoney = sumAidMoney(_countries);
     return ListView.builder(
       controller: _scrollController,
       itemCount: _countries.length,
       itemBuilder: (BuildContext context, int index) {
-        return CardTile(_countries.elementAt(index));
+        return CardTile(_countries.elementAt(index),totalAidMoney);
       },
     );
+  }
+
+  double sumAidMoney(List<CountryInformation> _countries){
+    double sum = 0;
+    for (var country in _countries) {
+      sum += country.aidMoney;
+    }
+    return sum;
   }
 }
 
 class CardTile extends StatelessWidget {
   final CountryInformation _countryInformation;
+  final double _totalAidMoney;
 
-  CardTile(this._countryInformation);
+  CardTile(this._countryInformation,this._totalAidMoney);
 
   @override
   Widget build(BuildContext context) {
@@ -220,13 +230,13 @@ class CardTile extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         CircularPercentIndicator(
-                          radius: 60,
-                          lineWidth: 5,
+                          radius: 70,
+                          lineWidth: 6,
                           progressColor: Colors.green,
-                          percent: 0.2,
+                          percent: _countryInformation.aidMoney/_totalAidMoney,
                           circularStrokeCap: CircularStrokeCap.round,
-                          center: Text(_countryInformation.aidMoney.toString() + "B"),
-                          footer: Text("Aidmoney",style: TextStyle(fontWeight: FontWeight.w300,fontSize: 15),),
+                          center: Text(_countryInformation.aidMoney/1000000 < 100 ? (_countryInformation.aidMoney/1000000).toStringAsFixed(2) + "\nMSEK":(_countryInformation.aidMoney/1000000).toStringAsFixed(1) + "\nMSEK",textAlign: TextAlign.center,),
+                          footer: Text("Stödpengar",style: TextStyle(fontWeight: FontWeight.w300,fontSize: 15),),
                           animation: true,
                           animationDuration: 1000,
                         ),
@@ -234,13 +244,13 @@ class CardTile extends StatelessWidget {
                           width: 30,
                         ),
                         CircularPercentIndicator(
-                          radius: 60,
-                          lineWidth: 5,
+                          radius: 70,
+                          lineWidth: 6,
                           progressColor: Colors.red,
-                          percent: 0.2,
+                          percent: _countryInformation.corruptionIndex/100,
                           circularStrokeCap: CircularStrokeCap.round,
-                          center: Text(_countryInformation.corruptionIndex.toString()),
-                          footer: Text("Corruption",style: TextStyle(fontWeight: FontWeight.w300,fontSize: 15),),
+                          center: Text(_countryInformation.corruptionIndex.toStringAsFixed(0),textAlign: TextAlign.center,style: TextStyle(fontSize: 20),),
+                          footer: Text("Korruption",style: TextStyle(fontWeight: FontWeight.w300,fontSize: 15),),
                           animation: true,
                           animationDuration: 1000,
                         ),
