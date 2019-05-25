@@ -231,6 +231,22 @@ class CardTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int green = (_countryInformation.corruptionIndex * 3.3).toInt();
+    int red = ((100 - _countryInformation.corruptionIndex) * 3.3).toInt();
+    if (red < 0) {
+      red = 0;
+    } else if (red > 255) {
+      red = 255;
+    }
+
+    if (green < 0) {
+      green = 0;
+    } else if (green > 255) {
+      green = 255;
+    }
+
+    Color color = Color.fromRGBO(red, green, 0, 1);
+
     return GestureDetector(
       onTap: () => Navigator.push(
           context,
@@ -278,7 +294,7 @@ class CardTile extends StatelessWidget {
                         CircularPercentIndicator(
                           radius: 70,
                           lineWidth: 6,
-                          progressColor: Colors.green,
+                          progressColor: Colors.blue,
                           percent:
                               _countryInformation.aidMoney < 0 ? 0: _countryInformation.aidMoney / _totalAidMoney,
                           circularStrokeCap: CircularStrokeCap.round,
@@ -307,7 +323,7 @@ class CardTile extends StatelessWidget {
                         CircularPercentIndicator(
                           radius: 70,
                           lineWidth: 6,
-                          progressColor: Colors.red,
+                          progressColor: color,
                           percent: _countryInformation.corruptionIndex / 100,
                           circularStrokeCap: CircularStrokeCap.round,
                           center: Text(
@@ -328,16 +344,15 @@ class CardTile extends StatelessWidget {
                         SizedBox(
                           width: 20,
                         ),
-                         Padding(
-                           padding: const EdgeInsets.only(right: 20),
-                           child: Container(
-                              width: 1,
-                              height: 70,
-                              decoration:
-                                  BoxDecoration(border: Border.all(width: 1)),
-                            ),
-                         ),
-                        
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Container(
+                            width: 1,
+                            height: 70,
+                            decoration:
+                                BoxDecoration(border: Border.all(width: 1)),
+                          ),
+                        ),
                         Column(
                           children: <Widget>[
                             Text(
