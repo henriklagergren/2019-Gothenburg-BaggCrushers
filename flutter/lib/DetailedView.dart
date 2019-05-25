@@ -80,7 +80,7 @@ class BarCard extends StatelessWidget {
                 _title,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 14,
+                  fontSize: 12,
                 ),
               ),
             ],
@@ -89,7 +89,7 @@ class BarCard extends StatelessWidget {
             LinearPercentIndicator(
               width: MediaQuery.of(context).size.width / 100 * 98,
               lineHeight: 20,
-              percent: _value / _maxValue,
+              percent: _value / _maxValue <= 0 ? 0 : _value / _maxValue,
               backgroundColor: Colors.grey,
               progressColor: Colors.blue,
               center: Text(
