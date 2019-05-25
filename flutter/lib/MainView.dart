@@ -23,7 +23,7 @@ class _MainViewState extends State<MainView> {
 
  
   FILTERVALUES dropdownValue = FILTERVALUES.CORRUPTION;
-  bool descending = false;
+  bool descending = true;
   String userSearch = "";
   ScrollController _scrollController;
   TextEditingController _textEditingController;
@@ -130,6 +130,12 @@ class _MainViewState extends State<MainView> {
                 List<CountryInformation> list = rest.map<CountryInformation>((json) => CountryInformation.fromJson(json)).toList();
                 list.removeWhere((value) => value == null); // This should probably not be done this way since it takes O(n)
                 list = sortBy(dropdownValue, list);
+                
+                if(descending == true){
+                  
+                  List<CountryInformation> reversedList = list.reversed.toList();
+                  return CardTiles(reversedList, _scrollController);
+                }
                   
                   return CardTiles(list,_scrollController);
                 }else{
