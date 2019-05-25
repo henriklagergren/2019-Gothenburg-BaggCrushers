@@ -68,8 +68,9 @@ class _MainViewState extends State<MainView> {
             builder: (BuildContext context, AsyncSnapshot snapshot){
               if(snapshot.hasData){
                 var data = json.decode(snapshot.data);
-                var rest = data as List;
+                var rest = data["data"] as List;
                 List<CountryInformation> list = rest.map<CountryInformation>((json) => CountryInformation.fromJson(json)).toList();
+                list.removeWhere((value) => value == null); // This should probably not be done this way since it takes O(n)
                 list = sortBy(dropdownValue, list);
                 
                 return CardTiles(list);
@@ -134,7 +135,7 @@ class CardTile extends StatelessWidget {
                           TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
                     ),
                     SizedBox(width: 5,),
-                    Image.network("https://www.countryflags.io/be/flat/64.png",scale: 2.5,),
+                    Image.network("https://www.countryflags.io/"+ _countryInformation.countryCode +"/flat/64.png",scale: 2.5,),
                       ],
                     ),
                    
@@ -187,5 +188,5 @@ class CardTile extends StatelessWidget {
 }
 
 Future<String> loadJson() async {
-  return await rootBundle.loadString("data/dummy.json");
+  return await rootBundle.loadString("data/data.json");
 }

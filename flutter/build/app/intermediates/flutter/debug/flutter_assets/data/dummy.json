@@ -1,52 +1,52 @@
 [
   {
     "country": "sweden",
-    "corruption": "89",
-    "money": "1"
+    "corruption": 89,
+    "money": 1
   },
   {
     "country": "finland",
-    "corruption": "85",
-    "money": "2"
+    "corruption": 85,
+    "money": 2
   },
   {
     "country": "afghanistan",
-    "corruption": "18",
-    "money": "300"
+    "corruption": 18,
+    "money": 300
   },
   {
     "country": "somalia",
-    "corruption": "10",
-    "money": "500"
+    "corruption": 10,
+    "money": 500
   },
   {
     "country": "test1",
-    "corruption": "30",
-    "money": "80"
+    "corruption": 30,
+    "money": 80
   },
   {
     "country": "test2",
-    "corruption": "45",
-    "money": "219"
+    "corruption": 45,
+    "money": 219
   },
   {
     "country": "test3",
-    "corruption": "27",
-    "money": "249"
+    "corruption": 27,
+    "money": 249
   },
   {
     "country": "test4",
-    "corruption": "99",
-    "money": "0"
+    "corruption": 99,
+    "money": 0
   },
   {
     "country": "test5",
-    "corruption": "66",
-    "money": "27"
+    "corruption": 66,
+    "money": 27
   },
   {
     "country": "test6",
-    "corruption": "78",
-    "money": "4"
+    "corruption": 78,
+    "money": 4
   }
 ]

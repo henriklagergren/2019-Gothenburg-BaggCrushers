@@ -43,6 +43,7 @@ flutter:
 
   assets:
     - data/dummy.json
+    - data/data.json
 
   
   fonts:
