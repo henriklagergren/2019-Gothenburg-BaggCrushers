@@ -15,25 +15,27 @@ class MainView extends StatefulWidget {
 
 enum FILTERVALUES { CORRUPTION, AID, MSEKCPI }
 
-String filtervaluesToString(FILTERVALUES value){
-  switch(value) {
-    case FILTERVALUES.AID: {
-      return "Aid";
-    }
-    break;
+String filtervaluesToString(FILTERVALUES value) {
+  switch (value) {
+    case FILTERVALUES.AID:
+      {
+        return "Aid";
+      }
+      break;
 
-    case FILTERVALUES.CORRUPTION: {
-      return "Corruption Index";
-    }
-    break;
+    case FILTERVALUES.CORRUPTION:
+      {
+        return "Corruption Index";
+      }
+      break;
 
-    case FILTERVALUES.MSEKCPI: {
-      return "MSEK/CPI";
-    }
-    break;
+    case FILTERVALUES.MSEKCPI:
+      {
+        return "MSEK/CPI";
+      }
+      break;
   }
 }
-
 
 class _MainViewState extends State<MainView> {
   FILTERVALUES dropdownValue = FILTERVALUES.CORRUPTION;
@@ -63,7 +65,7 @@ class _MainViewState extends State<MainView> {
     } else if (property == FILTERVALUES.AID) {
       list.sort((a, b) => a.aidMoney.compareTo(b.aidMoney));
     } else if (property == FILTERVALUES.MSEKCPI) {
-      list.sort((a,b) => a.calculateMSEKCPI().compareTo(b.calculateMSEKCPI()));
+      list.sort((a, b) => a.calculateMSEKCPI().compareTo(b.calculateMSEKCPI()));
     }
 
     if (userSearch != "") {
@@ -122,9 +124,9 @@ class _MainViewState extends State<MainView> {
                           dropdownValue = newValue;
                         });
                         _scrollController.animateTo(
-                        _scrollController.position.minScrollExtent,
-                        duration: Duration(milliseconds: 300),
-                        curve: Curves.ease);
+                            _scrollController.position.minScrollExtent,
+                            duration: Duration(milliseconds: 300),
+                            curve: Curves.ease);
                       },
                       items: <FILTERVALUES>[
                         FILTERVALUES.CORRUPTION,
@@ -142,11 +144,10 @@ class _MainViewState extends State<MainView> {
                       onPressed: () => setState(() {
                             descending = !descending;
                             _scrollController.animateTo(
-                            _scrollController.position.minScrollExtent,
-                            duration: Duration(milliseconds: 300),
-                            curve: Curves.ease);
+                                _scrollController.position.minScrollExtent,
+                                duration: Duration(milliseconds: 300),
+                                curve: Curves.ease);
                           }),
-                          
                       icon: Icon(
                         descending
                             ? MaterialCommunityIcons.getIconData(
@@ -195,7 +196,6 @@ class _MainViewState extends State<MainView> {
   }
 }
 
-
 class CardTiles extends StatelessWidget {
   final List<CountryInformation> _countries;
   final _scrollController;
@@ -231,8 +231,8 @@ class CardTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int green = (_countryInformation.corruptionIndex * 3.3).toInt();
-    int red = ((100 - _countryInformation.corruptionIndex) * 3.3).toInt();
+    int green = (_countryInformation.corruptionIndex * 4).toInt();
+    int red = ((100 - _countryInformation.corruptionIndex) * 2.8).toInt();
     if (red < 0) {
       red = 0;
     } else if (red > 255) {
@@ -295,8 +295,9 @@ class CardTile extends StatelessWidget {
                           radius: 70,
                           lineWidth: 6,
                           progressColor: Colors.blue,
-                          percent:
-                              _countryInformation.aidMoney < 0 ? 0: _countryInformation.aidMoney / _totalAidMoney,
+                          percent: _countryInformation.aidMoney < 0
+                              ? 0
+                              : _countryInformation.aidMoney / _totalAidMoney,
                           circularStrokeCap: CircularStrokeCap.round,
                           center: Text(
                             _countryInformation.aidMoney / 1000000 < 100
@@ -356,7 +357,9 @@ class CardTile extends StatelessWidget {
                         Column(
                           children: <Widget>[
                             Text(
-                              _countryInformation.calculateMSEKCPI().toStringAsFixed(3),
+                              _countryInformation
+                                  .calculateMSEKCPI()
+                                  .toStringAsFixed(3),
                               textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 20),
                             ),
