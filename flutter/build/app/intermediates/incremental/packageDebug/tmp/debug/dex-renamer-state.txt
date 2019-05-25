@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Sat May 25 15:36:45 CEST 2019
 base.0=/home/viktor/dev/2019-gothenburg-baggCrushers/flutter/build/app/intermediates/transforms/dexMerger/debug/0
+=======
+#Sat May 25 14:18:03 CEST 2019
+base.0=/Users/henriklagergren/Documents/flutter_apps/baggcrushers/flutter/build/app/intermediates/transforms/dexMerger/debug/0
+>>>>>>> d6bc9f48ee8f3e9aa6566351e539f91451002f11
 path.0=classes.dex
 renamed.0=classes.dex
