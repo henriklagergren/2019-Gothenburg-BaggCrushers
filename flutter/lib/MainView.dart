@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'dart:async';
@@ -15,16 +16,24 @@ class _MainViewState extends State<MainView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+      ),
       body: FutureBuilder(
         future: loadJson(),
-        builder: (BuildContext context, AsyncSnapshot snapshot){
-          if(snapshot.hasData){
+        builder: (BuildContext context, AsyncSnapshot snapshot) {
+          if (snapshot.hasData) {
             var data = json.decode(snapshot.data);
             var rest = data as List;
-            List<CountryInformation> list = rest.map<CountryInformation>((json) => CountryInformation.fromJson(json)).toList();
+            List<CountryInformation> list = rest
+                .map<CountryInformation>(
+                    (json) => CountryInformation.fromJson(json))
+                .toList();
             return CardTiles(list);
-          }else{
-            return CircularPercentIndicator();
+          } else {
+            return CircularPercentIndicator(
+              radius: 10,
+            );
           }
         },
       ),
@@ -53,45 +62,81 @@ class CardTile extends StatelessWidget {
 
   CardTile(this._countryInformation);
 
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(
+      onTap: () => Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => DetailedView(_countryInformation)),
-        );
-      },
+          MaterialPageRoute(
+              builder: (context) => DetailedView(_countryInformation))),
       child: Card(
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Text(_countryInformation.countryName.toUpperCase()),
-              CircularPercentIndicator(
-                  radius: 50,
-                  lineWidth: 5,
-                  progressColor: Colors.green,
-                  percent: 0.2,
-                  center: Text(_countryInformation.aidMoney),
-                  footer: Text("Amount of aidmoney"),
+        elevation: 4,
+        shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Expanded(child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                         Text(
+                      _countryInformation.countryName.toUpperCase(),
+                      style:
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                    ),
+                    SizedBox(width: 5,),
+                    Image.network("https://www.countryflags.io/be/flat/64.png",scale: 2.5,),
+                      ],
+                    ),
+                   
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        CircularPercentIndicator(
+                          radius: 60,
+                          lineWidth: 5,
+                          progressColor: Colors.green,
+                          percent: 0.2,
+                          circularStrokeCap: CircularStrokeCap.round,
+                          center: Text(_countryInformation.aidMoney + "B"),
+                          footer: Text("Aidmoney",style: TextStyle(fontWeight: FontWeight.w300,fontSize: 15),),
+                          animation: true,
+                          animationDuration: 1000,
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        CircularPercentIndicator(
+                          radius: 60,
+                          lineWidth: 5,
+                          progressColor: Colors.red,
+                          percent: 0.2,
+                          circularStrokeCap: CircularStrokeCap.round,
+                          center: Text(_countryInformation.corruptionIndex),
+                          footer: Text("Corruption",style: TextStyle(fontWeight: FontWeight.w300,fontSize: 15),),
+                          animation: true,
+                          animationDuration: 1000,
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                CircularPercentIndicator(
-                  radius: 50,
-                  lineWidth: 5,
-                  progressColor: Colors.red,
-                  percent: 0.2,
-                  center: Text(_countryInformation.corruptionIndex),
-                  footer: Text("Corruption index"),
-                ), 
-                Icon(
-                  IconData(0xe5e1, fontFamily: 'MaterialIcons', matchTextDirection: true)
-                )
-              ],
-            ),
-          ],
+              ),
+              Icon(
+                Icons.arrow_forward_ios,
+                size: 25,
+              ),
+            ],
+          ),
         ),
       ),
     );
