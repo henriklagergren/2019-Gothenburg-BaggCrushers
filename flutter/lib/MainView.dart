@@ -244,7 +244,7 @@ class CardTile extends StatelessWidget {
               ),
               Icon(
                 Icons.arrow_forward_ios,
-                size: 25,
+                size: 24,
               ),
             ],
           ),
