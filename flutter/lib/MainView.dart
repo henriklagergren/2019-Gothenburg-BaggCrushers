@@ -92,6 +92,13 @@ class _MainViewState extends State<MainView> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
+                    Text(
+                      "sort by: ",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(width: 5),
                     DropdownButton<FILTERVALUES>(
                     value: dropdownValue,
                     onChanged: (FILTERVALUES newValue) {
