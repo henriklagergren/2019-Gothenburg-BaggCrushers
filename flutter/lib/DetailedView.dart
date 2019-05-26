@@ -27,10 +27,13 @@ class DetailedView extends StatelessWidget {
         future: loadJson(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.hasData) {
+
+            // Parse jsonfile into workable objects below.
             var data = json.decode(snapshot.data);
             List<dynamic> countries = data["countries"];
             var sectorsMap;
 
+            // countries is a list containing maps with one key-value pairs each.
             for (Map<String, dynamic> country in countries) {
               if (country.containsKey(_countryInformation.countryName)) {
                 sectorsMap =
@@ -40,6 +43,7 @@ class DetailedView extends StatelessWidget {
 
             List<Widget> widgetList = new List();
 
+            // Create a bar card for each sector.
             for (var sector in sectorsMap) {
               sector.forEach((key, value) => widgetList
                   .add(new BarCard(key, value, _countryInformation.aidMoney)));
@@ -58,6 +62,10 @@ class DetailedView extends StatelessWidget {
   }
 }
 
+
+/// BarCard is an widget responsible for displaying a card containing a title
+/// and a bar that fills up depending on how close the _value parameter is to the
+/// _maxValue parameter.
 class BarCard extends StatelessWidget {
   final String _title;
   final double _value;
@@ -76,11 +84,14 @@ class BarCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                _title,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 12,
+              Expanded(
+                child: Text(
+                  _title,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                  ),
                 ),
               ),
             ],
@@ -130,7 +141,7 @@ class DetailedViewMainBody extends StatelessWidget {
     Color color = Color.fromRGBO(red, green, 0, 1);
 
     return Container(
-      child: Column(
+      child: ListView(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -146,7 +157,6 @@ class DetailedViewMainBody extends StatelessWidget {
                 width: 10,
               ),
               Image.network(
-                  // TODO change to load from the given countrycode.
                   "https://www.countryflags.io/" +
                       _countryInformation.countryCode +
                       "/flat/64.png"),
@@ -235,7 +245,13 @@ class DetailedViewMainBody extends StatelessWidget {
 
           SizedBox(height: 20,),
 
-          Row(
+         ListView(
+           shrinkWrap: true,
+           physics: ClampingScrollPhysics(),
+           children: _barCardList,
+         ),
+
+         /* Row(
             children: <Widget>[
 
               Expanded(
@@ -245,13 +261,17 @@ class DetailedViewMainBody extends StatelessWidget {
                         children: _barCardList,
                       )))
             ],
-          ),
+          ),*/
         ],
       ),
     );
   }
 }
 
+/// loadJson is responsible for loading the json-file containing the sectors by
+/// country. In the future this should probably be refactored to a backend
+/// service where we can make a REST call for the specific country instead of
+/// loading the data for all countries every time.
 Future<String> loadJson() async {
   return await rootBundle.loadString("data/sectors-by-country.json");
 }
