@@ -1,49 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'dart:async';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 import 'CountryInformation.dart';
 import 'DetailedView.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'Components.dart';
 
 class MainView extends StatefulWidget {
   @override
   _MainViewState createState() => _MainViewState();
-}
-
-/// FILTERVALUE is an enum representing all the possible states in the
-/// sortBy dropdown box.
-enum FILTERVALUE { CORRUPTION, AID, MSEKCPI, COUNTRY }
-
-/// filtervaluesToString converts the filtervalues to a string more readable for
-/// human beings.
-String filtervaluesToString(FILTERVALUE value) {
-  switch (value) {
-    case FILTERVALUE.AID:
-      {
-        return "Aid";
-      }
-      break;
-
-    case FILTERVALUE.CORRUPTION:
-      {
-        return "Corruption Index";
-      }
-      break;
-
-    case FILTERVALUE.MSEKCPI:
-      {
-        return "MSEK/CPI";
-      }
-      break;
-    case FILTERVALUE.COUNTRY:
-      {
-        return "Country";
-      }
-      break;
-  }
 }
 
 class _MainViewState extends State<MainView> {
@@ -60,40 +27,11 @@ class _MainViewState extends State<MainView> {
     _textEditingController = TextEditingController();
   }
 
-
   @override
   void dispose() {
     _scrollController.dispose();
     _textEditingController.dispose();
     super.dispose();
-  }
-
-  /// sortBy takes an list and returns it sorted and filtered depending on the
-  /// values of the inputted FILTERVALUE property and also the current search
-  /// string.
-  List<CountryInformation> sortBy(
-      FILTERVALUE property, List<CountryInformation> list) {
-    if (property == FILTERVALUE.CORRUPTION) {
-      list.sort((a, b) => a.corruptionIndex.compareTo(b.corruptionIndex));
-    } else if (property == FILTERVALUE.AID) {
-      list.sort((a, b) => a.aidMoney.compareTo(b.aidMoney));
-    } else if (property == FILTERVALUE.MSEKCPI) {
-      list.sort((a, b) => a.calculateMSEKCPI().compareTo(b.calculateMSEKCPI()));
-    } else if (property == FILTERVALUE.COUNTRY) {
-      list.sort((a,b) => a.countryName.compareTo(b.countryName));
-    }
-
-    if (userSearch != "") {
-      List<CountryInformation> filteredList = new List();
-      for (var countryInfo in list) {
-        if (countryInfo.countryName.contains(userSearch)) {
-          filteredList.add(countryInfo);
-        }
-      }
-      return filteredList;
-    } else {
-      return list;
-    }
   }
 
   @override
@@ -148,8 +86,7 @@ class _MainViewState extends State<MainView> {
                         FILTERVALUE.CORRUPTION,
                         FILTERVALUE.AID,
                         FILTERVALUE.COUNTRY
-                      ].map<DropdownMenuItem<FILTERVALUE>>(
-                          (FILTERVALUE value) {
+                      ].map<DropdownMenuItem<FILTERVALUE>>((FILTERVALUE value) {
                         return DropdownMenuItem<FILTERVALUE>(
                           value: value,
                           child: Text(filtervaluesToString(value)),
@@ -201,17 +138,60 @@ class _MainViewState extends State<MainView> {
 
               return CardTiles(list, _scrollController);
             } else {
-              return CircularPercentIndicator(
-                radius: 10,
-              );
+              return CircularProgressIndicator();
             }
           },
         ),
       ),
     );
   }
-}
 
+  /// sortBy takes an list and returns it sorted and filtered depending on the
+  /// values of the inputted FILTERVALUE property and also the current search
+  /// string.
+  List<CountryInformation> sortBy(
+      FILTERVALUE property, List<CountryInformation> list) {
+    if (property == FILTERVALUE.CORRUPTION) {
+      list.sort((a, b) => a.corruptionIndex.compareTo(b.corruptionIndex));
+    } else if (property == FILTERVALUE.AID) {
+      list.sort((a, b) => a.aidMoney.compareTo(b.aidMoney));
+    } else if (property == FILTERVALUE.MSEKCPI) {
+      list.sort((a, b) => a.calculateMSEKCPI().compareTo(b.calculateMSEKCPI()));
+    } else if (property == FILTERVALUE.COUNTRY) {
+      list.sort((a, b) => a.countryName.compareTo(b.countryName));
+    }
+
+    if (userSearch != "") {
+      List<CountryInformation> filteredList = new List();
+      for (var countryInfo in list) {
+        if (countryInfo.countryName.contains(userSearch)) {
+          filteredList.add(countryInfo);
+        }
+      }
+      return filteredList;
+    } else {
+      return list;
+    }
+  }
+
+  /// filtervaluesToString converts the filtervalues to a string more readable for
+  /// human beings.
+  String filtervaluesToString(FILTERVALUE value) {
+    switch (value) {
+      case FILTERVALUE.AID:
+        return "Aid";
+      
+      case FILTERVALUE.CORRUPTION:
+        return "Corruption Index";
+
+      case FILTERVALUE.MSEKCPI:
+        return "MSEK/CPI";
+
+      case FILTERVALUE.COUNTRY:
+        return "Country";
+    }
+  }
+}
 
 /// CardTiles is the ListView wrapper of all the individual CardTile.
 class CardTiles extends StatelessWidget {
@@ -249,22 +229,6 @@ class CardTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int green = (_countryInformation.corruptionIndex * 4).toInt();
-    int red = ((100 - _countryInformation.corruptionIndex) * 2.8).toInt();
-    if (red < 0) {
-      red = 0;
-    } else if (red > 255) {
-      red = 255;
-    }
-
-    if (green < 0) {
-      green = 0;
-    } else if (green > 255) {
-      green = 255;
-    }
-
-    Color color = Color.fromRGBO(red, green, 0, 1);
-
     return GestureDetector(
       onTap: () => Navigator.push(
           context,
@@ -278,134 +242,12 @@ class CardTile extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Expanded(
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          _countryInformation.countryName.toUpperCase(),
-                          style: TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 20),
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Image.network(
-                          "https://www.countryflags.io/" +
-                              _countryInformation.countryCode +
-                              "/flat/64.png",
-                          scale: 2.5,
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        CircularPercentIndicator(
-                          radius: 70,
-                          lineWidth: 6,
-                          progressColor: Colors.blue,
-                          percent: _countryInformation.aidMoney < 0
-                              ? 0
-                              : _countryInformation.aidMoney / _totalAidMoney,
-                          circularStrokeCap: CircularStrokeCap.round,
-                          center: Text(
-                            _countryInformation.aidMoney / 1000000 < 100
-                                ? (_countryInformation.aidMoney / 1000000)
-                                        .toStringAsFixed(2) +
-                                    "\nMSEK"
-                                : (_countryInformation.aidMoney / 1000000)
-                                        .toStringAsFixed(1) +
-                                    "\nMSEK",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 15),
-                          ),
-                          footer: Text(
-                            "Aid",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300, fontSize: 15),
-                          ),
-                          animation: true,
-                          animationDuration: 1000,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        CircularPercentIndicator(
-                          radius: 70,
-                          lineWidth: 6,
-                          progressColor: color,
-                          percent: _countryInformation.corruptionIndex / 100,
-                          circularStrokeCap: CircularStrokeCap.round,
-                          center: Text(
-                            _countryInformation.corruptionIndex
-                                    .toStringAsFixed(0) +
-                                "\nCPI",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 15),
-                          ),
-                          footer: Text(
-                            "Corruption Index",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300, fontSize: 15),
-                          ),
-                          animation: true,
-                          animationDuration: 1000,
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 20),
-                          child: Container(
-                            width: 1,
-                            height: 70,
-                            decoration:
-                                BoxDecoration(border: Border.all(width: 1)),
-                          ),
-                        ),
-                        Column(
-                          children: <Widget>[
-                            Text(
-                              _countryInformation
-                                  .calculateMSEKCPI()
-                                  .toStringAsFixed(3),
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 20),
-                            ),
-                            Text(
-                              "MSEK/CPI",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w300, fontSize: 15),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              Icon(
-                Icons.arrow_forward_ios,
-                size: 24,
-              ),
-            ],
-          ),
+          child: BasicInformation(_countryInformation, _totalAidMoney, 20, 2.5),
         ),
       ),
     );
   }
 }
-
 
 class _SearchBar extends StatelessWidget {
   final Function _onChange;
@@ -436,6 +278,9 @@ class _SearchBar extends StatelessWidget {
   }
 }
 
+/// FILTERVALUE is an enum representing all the possible states in the
+/// sortBy dropdown box.
+enum FILTERVALUE { CORRUPTION, AID, MSEKCPI, COUNTRY }
 
 Future<String> loadJson() async {
   return await rootBundle.loadString("data/data.json");
