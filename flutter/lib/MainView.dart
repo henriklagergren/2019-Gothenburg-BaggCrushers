@@ -138,7 +138,7 @@ class _MainViewState extends State<MainView> {
 
               return CardTiles(list, _scrollController);
             } else {
-              return CircularProgressIndicator();
+              return Center(child:CircularProgressIndicator());
             }
           },
         ),
@@ -242,7 +242,9 @@ class CardTile extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
+
           child: BasicInformation(_countryInformation, _totalAidMoney, 20, 2.5),
+
         ),
       ),
     );
