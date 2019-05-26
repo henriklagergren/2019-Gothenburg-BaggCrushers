@@ -164,7 +164,7 @@ class _MainViewState extends State<MainView> {
     if (userSearch != "") {
       List<CountryInformation> filteredList = new List();
       for (var countryInfo in list) {
-        if (countryInfo.countryName.contains(userSearch)) {
+        if (countryInfo.countryName.toLowerCase().contains(userSearch.toLowerCase())) {
           filteredList.add(countryInfo);
         }
       }
