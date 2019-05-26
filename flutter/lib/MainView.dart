@@ -129,14 +129,15 @@ class _MainViewState extends State<MainView> {
               list.removeWhere((value) =>
                   value ==
                   null); // This should probably not be done this way since it takes O(n)
+              double totalAidMoney = sumAidMoney(list);
               list = sortBy(dropdownValue, list);
 
               if (descending == true) {
                 List<CountryInformation> reversedList = list.reversed.toList();
-                return CardTiles(reversedList, _scrollController);
+                return CardTiles(reversedList, _scrollController,totalAidMoney);
               }
 
-              return CardTiles(list, _scrollController);
+              return CardTiles(list, _scrollController,totalAidMoney);
             } else {
               return Center(child:CircularProgressIndicator());
             }
@@ -144,6 +145,14 @@ class _MainViewState extends State<MainView> {
         ),
       ),
     );
+  }
+
+  double sumAidMoney(List<CountryInformation> _countries) {
+    double sum = 0;
+    for (var country in _countries) {
+      sum += country.aidMoney;
+    }
+    return sum;
   }
 
   /// sortBy takes an list and returns it sorted and filtered depending on the
@@ -197,27 +206,19 @@ class _MainViewState extends State<MainView> {
 class CardTiles extends StatelessWidget {
   final List<CountryInformation> _countries;
   final _scrollController;
+  final double _totalAidMoney;
 
-  CardTiles(this._countries, this._scrollController);
+  CardTiles(this._countries, this._scrollController,this._totalAidMoney);
 
   @override
   Widget build(BuildContext context) {
-    double totalAidMoney = sumAidMoney(_countries);
     return ListView.builder(
       controller: _scrollController,
       itemCount: _countries.length,
       itemBuilder: (BuildContext context, int index) {
-        return CardTile(_countries.elementAt(index), totalAidMoney);
+        return CardTile(_countries.elementAt(index), _totalAidMoney);
       },
     );
-  }
-
-  double sumAidMoney(List<CountryInformation> _countries) {
-    double sum = 0;
-    for (var country in _countries) {
-      sum += country.aidMoney;
-    }
-    return sum;
   }
 }
 
