@@ -13,28 +13,32 @@ class MainView extends StatefulWidget {
   _MainViewState createState() => _MainViewState();
 }
 
-enum FILTERVALUES { CORRUPTION, AID, MSEKCPI, COUNTRY }
+/// FILTERVALUE is an enum representing all the possible states in the
+/// sortBy dropdown box.
+enum FILTERVALUE { CORRUPTION, AID, MSEKCPI, COUNTRY }
 
-String filtervaluesToString(FILTERVALUES value) {
+/// filtervaluesToString converts the filtervalues to a string more readable for
+/// human beings.
+String filtervaluesToString(FILTERVALUE value) {
   switch (value) {
-    case FILTERVALUES.AID:
+    case FILTERVALUE.AID:
       {
         return "Aid";
       }
       break;
 
-    case FILTERVALUES.CORRUPTION:
+    case FILTERVALUE.CORRUPTION:
       {
         return "Corruption Index";
       }
       break;
 
-    case FILTERVALUES.MSEKCPI:
+    case FILTERVALUE.MSEKCPI:
       {
         return "MSEK/CPI";
       }
       break;
-    case FILTERVALUES.COUNTRY:
+    case FILTERVALUE.COUNTRY:
       {
         return "Country";
       }
@@ -43,7 +47,7 @@ String filtervaluesToString(FILTERVALUES value) {
 }
 
 class _MainViewState extends State<MainView> {
-  FILTERVALUES dropdownValue = FILTERVALUES.CORRUPTION;
+  FILTERVALUE dropdownValue = FILTERVALUE.MSEKCPI;
   bool descending = true;
   String userSearch = "";
   ScrollController _scrollController;
@@ -56,6 +60,7 @@ class _MainViewState extends State<MainView> {
     _textEditingController = TextEditingController();
   }
 
+
   @override
   void dispose() {
     _scrollController.dispose();
@@ -63,15 +68,18 @@ class _MainViewState extends State<MainView> {
     super.dispose();
   }
 
+  /// sortBy takes an list and returns it sorted and filtered depending on the
+  /// values of the inputted FILTERVALUE property and also the current search
+  /// string.
   List<CountryInformation> sortBy(
-      FILTERVALUES property, List<CountryInformation> list) {
-    if (property == FILTERVALUES.CORRUPTION) {
+      FILTERVALUE property, List<CountryInformation> list) {
+    if (property == FILTERVALUE.CORRUPTION) {
       list.sort((a, b) => a.corruptionIndex.compareTo(b.corruptionIndex));
-    } else if (property == FILTERVALUES.AID) {
+    } else if (property == FILTERVALUE.AID) {
       list.sort((a, b) => a.aidMoney.compareTo(b.aidMoney));
-    } else if (property == FILTERVALUES.MSEKCPI) {
+    } else if (property == FILTERVALUE.MSEKCPI) {
       list.sort((a, b) => a.calculateMSEKCPI().compareTo(b.calculateMSEKCPI()));
-    } else if (property == FILTERVALUES.COUNTRY) {
+    } else if (property == FILTERVALUE.COUNTRY) {
       list.sort((a,b) => a.countryName.compareTo(b.countryName));
     }
 
@@ -124,9 +132,9 @@ class _MainViewState extends State<MainView> {
                       ),
                     ),
                     SizedBox(width: 5),
-                    DropdownButton<FILTERVALUES>(
+                    DropdownButton<FILTERVALUE>(
                       value: dropdownValue,
-                      onChanged: (FILTERVALUES newValue) {
+                      onChanged: (FILTERVALUE newValue) {
                         setState(() {
                           dropdownValue = newValue;
                         });
@@ -135,14 +143,14 @@ class _MainViewState extends State<MainView> {
                             duration: Duration(milliseconds: 300),
                             curve: Curves.ease);
                       },
-                      items: <FILTERVALUES>[
-                        FILTERVALUES.MSEKCPI,
-                        FILTERVALUES.CORRUPTION,
-                        FILTERVALUES.AID,
-                        FILTERVALUES.COUNTRY
-                      ].map<DropdownMenuItem<FILTERVALUES>>(
-                          (FILTERVALUES value) {
-                        return DropdownMenuItem<FILTERVALUES>(
+                      items: <FILTERVALUE>[
+                        FILTERVALUE.MSEKCPI,
+                        FILTERVALUE.CORRUPTION,
+                        FILTERVALUE.AID,
+                        FILTERVALUE.COUNTRY
+                      ].map<DropdownMenuItem<FILTERVALUE>>(
+                          (FILTERVALUE value) {
+                        return DropdownMenuItem<FILTERVALUE>(
                           value: value,
                           child: Text(filtervaluesToString(value)),
                         );
@@ -204,6 +212,8 @@ class _MainViewState extends State<MainView> {
   }
 }
 
+
+/// CardTiles is the ListView wrapper of all the individual CardTile.
 class CardTiles extends StatelessWidget {
   final List<CountryInformation> _countries;
   final _scrollController;
@@ -396,6 +406,7 @@ class CardTile extends StatelessWidget {
   }
 }
 
+
 class _SearchBar extends StatelessWidget {
   final Function _onChange;
   final String _hintText;
@@ -424,6 +435,7 @@ class _SearchBar extends StatelessWidget {
     );
   }
 }
+
 
 Future<String> loadJson() async {
   return await rootBundle.loadString("data/data.json");
