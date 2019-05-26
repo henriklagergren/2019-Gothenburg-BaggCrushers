@@ -299,7 +299,7 @@ class CardTile extends StatelessWidget {
                         Image.network(
                           "https://www.countryflags.io/" +
                               _countryInformation.countryCode +
-                              "/flat/64.png",
+                              "/flat/(.png",
                           scale: 2.5,
                         ),
                       ],

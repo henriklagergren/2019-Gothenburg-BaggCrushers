@@ -42,11 +42,20 @@ class DetailedView extends StatelessWidget {
             }
 
             List<Widget> widgetList = new List();
+            List<_tempObject> tempList = new List();
+
 
             // Create a bar card for each sector.
             for (var sector in sectorsMap) {
-              sector.forEach((key, value) => widgetList
-                  .add(new BarCard(key, value, _countryInformation.aidMoney)));
+              // sector.forEach((key, value) => widgetList
+              //    .add(new BarCard(key, value, _countryInformation.aidMoney)));
+              sector.forEach((key, value) => tempList.add(new _tempObject(key, value)));
+            }
+
+            tempList.sort((a, b) => a.value.compareTo(b.value));
+
+            for (_tempObject tempObject in tempList) {
+              widgetList.add(new BarCard(tempObject._title, tempObject._value, _countryInformation.aidMoney));
             }
 
             return DetailedViewMainBody(
@@ -61,6 +70,18 @@ class DetailedView extends StatelessWidget {
     );
   }
 }
+
+// Temporary object to be able to sort. Should probably do this in another way later.
+class _tempObject {
+  final String _title;
+  final double _value;
+
+  _tempObject(this._title, this._value);
+
+  get title => _title;
+  get value => _value;
+}
+
 
 
 /// BarCard is an widget responsible for displaying a card containing a title
