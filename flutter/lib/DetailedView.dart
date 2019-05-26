@@ -1,5 +1,6 @@
+import 'dart:collection';
 import 'dart:convert';
-
+import 'Components.dart';
 import 'package:baggcrushers/CountryInformation.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
@@ -27,7 +28,6 @@ class DetailedView extends StatelessWidget {
         future: loadJson(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.hasData) {
-
             // Parse jsonfile into workable objects below.
             var data = json.decode(snapshot.data);
             List<dynamic> countries = data["countries"];
@@ -45,6 +45,9 @@ class DetailedView extends StatelessWidget {
             List<_tempObject> tempList = new List();
 
 
+           
+            
+
             // Create a bar card for each sector.
             for (var sector in sectorsMap) {
               // sector.forEach((key, value) => widgetList
@@ -56,20 +59,20 @@ class DetailedView extends StatelessWidget {
 
             for (_tempObject tempObject in tempList) {
               widgetList.add(new BarCard(tempObject._title, tempObject._value, _countryInformation.aidMoney));
+
             }
 
             return DetailedViewMainBody(
                 _countryInformation, widgetList, _totalAidMoney);
           } else {
-            return CircularPercentIndicator(
-              radius: 10,
-            );
+            return CircularProgressIndicator();
           }
         },
       ),
     );
   }
 }
+
 
 // Temporary object to be able to sort. Should probably do this in another way later.
 class _tempObject {
@@ -102,33 +105,27 @@ class BarCard extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Expanded(
-                child: Text(
-                  _title,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                  ),
-                ),
-              ),
-            ],
+          Text(
+            _title,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 14,
+            ),
           ),
-          Row(children: <Widget>[
-            LinearPercentIndicator(
-              width: MediaQuery.of(context).size.width / 100 * 98,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: LinearPercentIndicator(
               lineHeight: 20,
               percent: _value / _maxValue <= 0 ? 0 : _value / _maxValue,
-              backgroundColor: Colors.grey,
+              backgroundColor: Colors.grey[100],
               progressColor: Colors.blue,
+              linearStrokeCap: LinearStrokeCap.round,
               center: Text(
                 (_value / 1000000).toStringAsFixed(2) + " MSEK",
               ),
             ),
-          ]),
+          ),
         ],
       ),
     );
@@ -145,144 +142,30 @@ class DetailedViewMainBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int green = (_countryInformation.corruptionIndex * 4).toInt();
-    int red = ((100 - _countryInformation.corruptionIndex) * 2.8).toInt();
-    if (red < 0) {
-      red = 0;
-    } else if (red > 255) {
-      red = 255;
-    }
-
-    if (green < 0) {
-      green = 0;
-    } else if (green > 255) {
-      green = 255;
-    }
-
-    Color color = Color.fromRGBO(red, green, 0, 1);
-
     return Container(
       child: ListView(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                _countryInformation.countryName.toString().toUpperCase(),
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 34,
-                ),
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Image.network(
-                  "https://www.countryflags.io/" +
-                      _countryInformation.countryCode +
-                      "/flat/64.png"),
-            ],
+          BasicInformation(_countryInformation, _totalAidMoney, 34, 1),
+          Divider(),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            "Given aid in sectors:",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: 20,
+            ),
           ),
           SizedBox(
             height: 10,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              CircularPercentIndicator(
-                radius: 70,
-                lineWidth: 6,
-                progressColor: Colors.blue,
-                percent: _countryInformation.aidMoney < 0
-                    ? 0
-                    : _countryInformation.aidMoney / _totalAidMoney,
-                circularStrokeCap: CircularStrokeCap.round,
-                center: Text(
-                  _countryInformation.aidMoney / 1000000 < 100
-                      ? (_countryInformation.aidMoney / 1000000)
-                              .toStringAsFixed(2) +
-                          "\nMSEK"
-                      : (_countryInformation.aidMoney / 1000000)
-                              .toStringAsFixed(1) +
-                          "\nMSEK",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 15),
-                ),
-                footer: Text(
-                  "Aid",
-                  style: TextStyle(fontWeight: FontWeight.w300, fontSize: 15),
-                ),
-                animation: true,
-                animationDuration: 1000,
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              CircularPercentIndicator(
-                radius: 70,
-                lineWidth: 6,
-                progressColor: color,
-                percent: _countryInformation.corruptionIndex / 100,
-                circularStrokeCap: CircularStrokeCap.round,
-                center: Text(
-                  _countryInformation.corruptionIndex.toStringAsFixed(0) +
-                      "\nCPI",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 15),
-                ),
-                footer: Text(
-                  "Corruption Index",
-                  style: TextStyle(fontWeight: FontWeight.w300, fontSize: 15),
-                ),
-                animation: true,
-                animationDuration: 1000,
-              ),
-              SizedBox(
-                width: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 20),
-                child: Container(
-                  width: 1,
-                  height: 70,
-                  decoration: BoxDecoration(border: Border.all(width: 1)),
-                ),
-              ),
-              Column(
-                children: <Widget>[
-                  Text(
-                    _countryInformation.calculateMSEKCPI().toStringAsFixed(3),
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "MSEK/CPI",
-                    style: TextStyle(fontWeight: FontWeight.w300, fontSize: 15),
-                  ),
-                ],
-              ),
-            ],
+          ListView(
+            shrinkWrap: true,
+            physics: ClampingScrollPhysics(),
+            children: _barCardList,
           ),
-
-          SizedBox(height: 20,),
-
-         ListView(
-           shrinkWrap: true,
-           physics: ClampingScrollPhysics(),
-           children: _barCardList,
-         ),
-
-         /* Row(
-            children: <Widget>[
-
-              Expanded(
-                  child: SizedBox(
-                      height: MediaQuery.of(context).size.height / 100 * 65,
-                      child: ListView(
-                        children: _barCardList,
-                      )))
-            ],
-          ),*/
         ],
       ),
     );
