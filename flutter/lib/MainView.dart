@@ -138,7 +138,7 @@ class _MainViewState extends State<MainView> {
 
               return CardTiles(list, _scrollController);
             } else {
-              return CircularProgressIndicator();
+              return Center(child:CircularProgressIndicator());
             }
           },
         ),

@@ -55,7 +55,7 @@ class DetailedView extends StatelessWidget {
               sector.forEach((key, value) => tempList.add(new _tempObject(key, value)));
             }
 
-            tempList.sort((a, b) => a.value.compareTo(b.value));
+            tempList.sort((a, b) => -a.value.compareTo(b.value));
 
             for (_tempObject tempObject in tempList) {
               widgetList.add(new BarCard(tempObject._title, tempObject._value, _countryInformation.aidMoney));
@@ -65,7 +65,7 @@ class DetailedView extends StatelessWidget {
             return DetailedViewMainBody(
                 _countryInformation, widgetList, _totalAidMoney);
           } else {
-            return CircularProgressIndicator();
+            return Center(child:CircularProgressIndicator());
           }
         },
       ),
@@ -120,7 +120,9 @@ class BarCard extends StatelessWidget {
               percent: _value / _maxValue <= 0 ? 0 : _value / _maxValue,
               backgroundColor: Colors.grey[100],
               progressColor: Colors.blue,
-              linearStrokeCap: LinearStrokeCap.round,
+              linearStrokeCap: LinearStrokeCap.butt,
+              animation: true,
+              animationDuration: 1000,
               center: Text(
                 (_value / 1000000).toStringAsFixed(2) + " MSEK",
               ),
