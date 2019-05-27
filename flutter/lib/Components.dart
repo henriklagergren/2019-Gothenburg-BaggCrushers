@@ -12,12 +12,7 @@ class BasicInformation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Expanded(
-                child: Column(
+    return  Column(
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -126,14 +121,8 @@ class BasicInformation extends StatelessWidget {
                       ],
                     ),
                   ],
-                ),
-              ),
-              Icon(
-                Icons.arrow_forward_ios,
-                size: 24,
-              ),
-            ],
-          );
+                );
+            
   }
 
   Color getCorruptionColor(){

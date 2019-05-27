@@ -244,8 +244,20 @@ class CardTile extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
 
-          child: BasicInformation(_countryInformation, _totalAidMoney, 20, 2.5),
-
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Expanded(
+                child:BasicInformation(_countryInformation, _totalAidMoney, 20, 2.5),
+              ),
+              Icon(
+                Icons.arrow_forward_ios,
+                size: 24,
+              ),
+            ]
+              
+          ),
         ),
       ),
     );
