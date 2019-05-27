@@ -28,9 +28,8 @@ and corruption index in an nice and easy to understand way. We also display
  any data on the corruption index by sector unfortunately but that is definitely 
  something that would be a great feature in the app.
  
+ ![BaggCrushers App Demo](https://media.giphy.com/media/cKsiqaLDBDnrM2dCMa/giphy.gif)
  
- <img src="https://i.imgur.com/JFXF5Al.jpg" width="30%" height="30%">     <img src="https://i.imgur.com/iKl9yHG.jpg" width="30%" height="30%">
-
 ## Services used
 #### Flag API
 To display flags for each country we have used an online API called Countrylags.
