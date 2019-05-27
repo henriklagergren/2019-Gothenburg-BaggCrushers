@@ -26,7 +26,10 @@ and corruption index in an nice and easy to understand way. We also display
  sectors the investments are made. In the beggining of the project 
  we wanted to do the risk calculation by sector aswell but we could not find
  any data on the corruption index by sector unfortunately but that is definitely 
- something that would be a great feature in the app. 
+ something that would be a great feature in the app.
+ 
+ 
+ <img src="https://i.imgur.com/JFXF5Al.jpg" width="30%" height="30%">     <img src="https://i.imgur.com/iKl9yHG.jpg" width="30%" height="30%">
 
 ## Services used
 #### Flag API
